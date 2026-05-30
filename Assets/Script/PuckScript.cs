@@ -66,5 +66,6 @@ public class PuckScript : MonoBehaviour
 
         currReturnSpeed += returnSpeedIncrement;
         returnMode = true;
+        print("entered");
     }
 }
