@@ -6,58 +6,80 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     protected Transform player;
-    [SerializeField]
-    private float speed = 3, rangeDistance = 2;
-    protected bool canAttack = true, isAttacking;
+    protected float speed = 3, rangeDistance = 2;
+    protected bool canAttack = true, isAttacking, shouldRotate = true;
     protected Rigidbody2D rb;
+    protected float distance;
+    protected Vector2 direction;
 
     private void Start()
     {
         player = GameObject.Find("Player").transform;
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void OnEnable()
-    {
         EnemyManager.instance.Enemies.Add(gameObject);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         EnemyManager.instance.Enemies.Remove(gameObject);
     }
 
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         Movement();
     }
 
-    public void Movement()
+    public virtual void Movement()
     {
-        float distance = Vector2.Distance(transform.position, player.position);
-        Vector2 direction = dir(player);
+        if (isAttacking) return;
+
+        setDistAndDir();
+
+        if (shouldRotate) rb.SetRotation(getAngle());
 
         if (distance > rangeDistance)
         {
             rb.linearVelocity = direction * speed;
         }
-        else if (!isAttacking && canAttack)
+        else
         {
-            isAttacking = true;
-            canAttack = false;
-            Attack();
-        }
+            halt();
 
-        if(!isAttacking)
-        {
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            rb.SetRotation(angle);
+            if(!isAttacking && canAttack)
+            {
+                isAttacking = true;
+                canAttack = false;
+                shouldRotate = false;
+                Attack();
+            }
         }
     }
 
-    public Vector2 dir(Transform target)
+    public void setDistAndDir()
+    {
+        distance = getDistance();
+        direction = getDirection(player);
+    }
+
+    public Vector2 getDirection(Transform target)
     {
         return (target.position - transform.position).normalized;
+    }
+
+    public float getDistance()
+    {
+        return Vector2.Distance(transform.position, player.position); 
+    }
+
+    public float getAngle()
+    {
+        return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
+    }
+
+    public void setSpeedAndRange(float speed, float rangeDistance)
+    {
+        this.speed = speed;
+        this.rangeDistance = rangeDistance;
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
@@ -65,12 +87,10 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("puck")) death();
     }
 
-    /*
-     public void setisAttacking(bool val)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        isAttacking = val;
+        
     }
-    */
 
     protected virtual void Attack()
     {
@@ -90,5 +110,10 @@ public class EnemyScript : MonoBehaviour
     public void damage(int damage)
     {
         //hp -= damage
+    }
+
+    public void halt()
+    {
+        rb.linearVelocity = Vector2.zero;
     }
 }

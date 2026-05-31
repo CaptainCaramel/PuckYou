@@ -8,13 +8,18 @@ public class WolfScript : EnemyScript
     public float cooldown = 1f;
     public float attackDur = 0.3f;
 
+    private void Awake()
+    {
+        setSpeedAndRange(3, 2);
+    }
+
     protected override IEnumerator AttackCrt()
     {
-        rb.linearVelocity = Vector2.zero;
         bite.SetActive(true);
         yield return new WaitForSeconds(attackDur);
         bite.SetActive(false);
         isAttacking = false;
+        shouldRotate = true;
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
     }

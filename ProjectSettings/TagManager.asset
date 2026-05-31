@@ -6,6 +6,7 @@ TagManager:
   tags:
   - puck
   - berserkerDash
+  - border
   layers:
   - Default
   - TransparentFX

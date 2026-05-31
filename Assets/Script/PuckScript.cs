@@ -113,7 +113,6 @@ public class PuckScript : MonoBehaviour
 
         }
 
-
         if (!spinMode)
         {
             currReturnSpeed += returnSpeedIncrement;
