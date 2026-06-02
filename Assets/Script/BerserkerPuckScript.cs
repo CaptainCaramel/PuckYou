@@ -13,6 +13,7 @@ public class BerserkerPuckScript : PuckScript
     private void puckParry()
     {
         returnObj = FindClosestObject(EnemyManager.instance.Enemies.ToArray());
+        returnMode = true;
         print(returnObj);
     }
 
@@ -22,7 +23,10 @@ public class BerserkerPuckScript : PuckScript
 
         if (collision.gameObject.CompareTag("berserkerDash"))
         {
+            //print(collision.transform.root.GetComponent<Rigidbody2D>().linearVelocity.magnitude / 0.5f);
+            currReturnSpeed *= collision.transform.root.GetComponent<Rigidbody2D>().linearVelocity.magnitude * 0.1f;
             puckParry();
         }
     }
+
 }

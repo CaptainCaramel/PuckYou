@@ -57,7 +57,7 @@ public class EnemyManager : MonoBehaviour
     {
         killCount++;
         rotation += 4;
-        clock.transform.rotation = Quaternion.Euler(0,0,rotation);
+        //clock.transform.rotation = Quaternion.Euler(0,0,rotation);
     }
 
     private IEnumerator spawning()

@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 304701404}
   - component: {fileID: 304701406}
   m_Layer: 0
-  m_Name: Player
+  m_Name: TheWhiteDeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1523,7 +1523,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6651711834880210570, guid: 808c456068c328749b5ac9aff9631530, type: 3}
-  m_Color: {r: 0.6933962, g: 1, b: 0.88042206, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1640,7 +1640,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.03125
+  orthographic size: 3.78125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7631,6 +7631,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Enemies: []
+  EnemiesToSpawn: []
+  spawningParticle: {fileID: 0}
+  killCount: 0
+  recordedKillCount: 0
+  rotation: 0
+  clock: {fileID: 0}
 --- !u!4 &1008557096
 Transform:
   m_ObjectHideFlags: 0

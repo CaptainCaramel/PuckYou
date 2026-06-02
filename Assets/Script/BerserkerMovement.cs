@@ -105,15 +105,23 @@ public class BerserkerMovement : PlayerMovement
 
     }
 
+
+    protected override bool CanQ()
+    {
+        return base.CanQ() && !isAttacking;
+    }
+
     protected override void Attack_QAction(InputAction.CallbackContext callbackContext)
     {
-        base.Attack_QAction(callbackContext);
+        if (!CanQ()) return;
         StartCoroutine(qAttack());
     }
 
 
     protected virtual void Attack_EStarted(InputAction.CallbackContext callbackContext)
     {
+        if (!CanE()) return;
+
         isChargingDash = true;
         dashSlider.gameObject.SetActive(true);
     }
@@ -127,7 +135,7 @@ public class BerserkerMovement : PlayerMovement
 
     protected virtual void Attack_UltAction(InputAction.CallbackContext callbackContext)
     {
-
+        if (!CanR()) return;
     }
 
 }

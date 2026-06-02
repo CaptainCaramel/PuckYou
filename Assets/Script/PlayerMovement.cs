@@ -47,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("VFX")]
     [SerializeField]
     private CamShakerScript shakeCamScript;
+    [SerializeField] hardLockToTargetScript shadowScript;
+
+    [SerializeField] protected ShakeSelfScript shakeSelfScript;
 
     //Amp, Freq, Time
     private Vector3 damageShake = new Vector3( 3f, 0.2f, 0.1f);
@@ -62,12 +65,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        gameObject.name = "Player";
         pl_controls = new InputSystem_Actions();
         shakeCamScript = GetComponent<CamShakerScript>();
+        shadowScript.target = this.transform;
         instance = this;
         //sFlash = GetComponent<spriteFlashScript>();
         attackAvailable = true;
         isAttacking = false;
+
+        isQing = false;
+        isEing = false;
+        isUlting = false;
+
+        q_onCooldown = false;
+        e_onCooldown = false;
+        ult_onCooldown = false;
     }
 
     protected virtual void OnEnable()
@@ -179,7 +192,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Attack Code
         GameObject puck = Instantiate(puckPrefab, puckTransform.position , puckTransform.rotation);
-        puck.GetComponent<PuckScript>().returnObj = gameObject;
+        //puck.GetComponent<PuckScript>().returnObj = gameObject;
         puckHover.SetActive(false);
 
 
@@ -240,19 +253,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    protected bool CanQ()
+    protected virtual bool CanQ()
     {
-        return !q_onCooldown && isQing && CanAttack(); 
+        return !q_onCooldown && !isQing; 
     }
 
-    protected bool CanE()
+    protected virtual bool CanE()
     {
-        return true;
+        return !e_onCooldown && !isEing;
     }
 
-    protected bool CanR()
+    protected virtual bool CanR()
     {
-        return true;
+        return !ult_onCooldown && !isUlting;
     }
 
 

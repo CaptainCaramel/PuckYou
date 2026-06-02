@@ -25,19 +25,18 @@ public class WhiteDeathPuckMovement : PuckScript
         EnemyScript enemyScript = collision.transform.root.GetComponent<EnemyScript>();
         PlayerMovement pm = collision.transform.root.GetComponent<PlayerMovement>();
 
-        if (collectable && collision.transform.root.gameObject == returnObj && pm != null && !pm.isEing)
-        {
-            returnPuck(pm);
-            return;
-        }
-
         if (enemyScript != null)
         {
             enemyScript.damage(damage);
-            returnMode = true;
+            if (!charged)
+            {
+                returnObj = PlayerMovement.instance.gameObject;
+                returnMode = true;
+            }
         }
 
         currReturnSpeed += 2.5f;
+         
         camShakerScript.StartShake(hitShake);
     }
 }

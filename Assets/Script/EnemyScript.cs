@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = PlayerMovement.instance.gameObject.transform;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }

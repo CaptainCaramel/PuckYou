@@ -12,7 +12,11 @@ public class WhiteDeathMovement : PlayerMovement
     private bool isChargingQ = false;
     private bool isQMaxxed = false;
     [SerializeField] private float qCooldown = 5;
+    [SerializeField] private float fullQCooldown = 8;
     [SerializeField] GameObject halfChargedPuck, fullChargedPuck;
+
+    [SerializeField] private float zoomOutCamSize = 9;
+    [SerializeField] private float zoomOutCamSpeed = 1.5f;
 
     [SerializeField] private float knockbacktime = 0.25f;
     [SerializeField] private float knockbackForce = 200f;
@@ -44,8 +48,32 @@ public class WhiteDeathMovement : PlayerMovement
 
     private IEnumerator superQ()
     {
-        yield return null;
-        print("fullQ");
+        attackAvailable = false;
+        isAttacking = true;
+
+        CameraManager.instance.resetZoom(zoomOutCamSpeed / 2);
+
+        shakeSelfScript.stopShake();
+
+        GameObject puck = Instantiate(fullChargedPuck, puckTransform.position, puckTransform.rotation);
+        puck.GetComponent<PuckScript>().returnObj = gameObject;
+        WhiteDeathPuckMovement t = puck.GetComponent<WhiteDeathPuckMovement>();
+        t.StartCoroutine(t.returnCRT());
+        puckHover.SetActive(false);
+
+        lockMovement(true);
+        rb.AddForce(-transform.right * knockbackForce * 2.5f);
+        rb.linearDamping = 1.75f;
+        yield return new WaitForSeconds(knockbacktime + 0.25f);
+        rb.linearDamping = 0;
+        unlockMovement();
+
+        currentAction = null;
+
+
+        q_onCooldown = true;
+        yield return new WaitForSeconds(fullQCooldown);
+        q_onCooldown = false;   
     }
 
     private IEnumerator normalQ()
@@ -74,18 +102,32 @@ public class WhiteDeathMovement : PlayerMovement
         q_onCooldown = false;
     }
 
+    protected override bool CanQ()
+    {
+        return base.CanQ() && !isAttacking;
+    }
+
     private void Attack_StartQ(InputAction.CallbackContext callbackContext)
     {
+        if (!CanQ()) return;
+
         shootSlider.gameObject.SetActive(true);
         isChargingQ = true;
     }
     protected void Attack_FullQ(InputAction.CallbackContext callbackContext)
     {
+        if (!CanQ()) return;
+
+        CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed);
+
         isQMaxxed = true;
+        shakeSelfScript.Begin();
     }
 
     protected void Attack_ReleaseQ(InputAction.CallbackContext callbackContext)
     {
+        if (!CanQ()) return;
+
         if (isQMaxxed) StartCoroutine(superQ());
         else StartCoroutine(normalQ());
 

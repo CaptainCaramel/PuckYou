@@ -5134,10 +5134,9 @@ MonoBehaviour:
   returnSpeedIncrement: 3.5
   damage: 2
   sendOnAwake: 1
-  spinMode: 0
   spawnTime: 0.25
   returnObj: {fileID: 0}
-  charged: 0
+  charged: 1
   returnTime: 1.45
 --- !u!50 &7048131091350983387
 Rigidbody2D:

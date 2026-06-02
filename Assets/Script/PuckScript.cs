@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PuckScript : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class PuckScript : MonoBehaviour
     protected float currReturnSpeed;
 
     public GameObject returnObj;
+    private GameObject player;
 
     protected bool returnMode;
     private Vector3 moveDir;
@@ -38,6 +40,8 @@ public class PuckScript : MonoBehaviour
         collectable = false;
         rb = GetComponent<Rigidbody2D>();
         camShakerScript = GetComponent<CamShakerScript>();
+
+        player = PlayerMovement.instance.gameObject;
 
         trailParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
 
@@ -98,6 +102,8 @@ public class PuckScript : MonoBehaviour
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             rb.rotation = angle;
 
+            currReturnSpeed = Mathf.Clamp(currReturnSpeed, 3, 24);
+
             rb.linearVelocity = transform.right * currReturnSpeed;         
         }
     }
@@ -105,26 +111,24 @@ public class PuckScript : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyScript enemyScript = collision.transform.root.GetComponent<EnemyScript>();
-        PlayerMovement pm = collision.transform.root.GetComponent<PlayerMovement>();
-
-        if (collectable && collision.transform.root.gameObject == returnObj && pm != null && !pm.isEing)
-        {
-            returnPuck(pm);
-            return;
-        }
-
-        if (returnMode && enemyScript != null)
-        {
-            returnObj = PlayerMovement.instance.gameObject;
-        }
-
 
         if (enemyScript != null)
         {
             enemyScript.damage(damage);
             currReturnSpeed += returnSpeedIncrement;
+            returnObj = PlayerMovement.instance.gameObject;
             returnMode = true;
         }
         camShakerScript.StartShake(hitShake);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        PlayerMovement pm = collision.transform.root.GetComponent<PlayerMovement>();
+        if (pm != null && !pm.isEing && (returnObj == player || collectable))
+        {
+            returnPuck(pm);
+            return;
+        }
     }
 }
