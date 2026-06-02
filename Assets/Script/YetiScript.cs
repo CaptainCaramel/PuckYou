@@ -7,53 +7,56 @@ public class YetiScript : EnemyScript
 {
     private float tooFarDistance = 6.5f;
     private float chaseSpeed = 2.0f, runawaySpeed = 2.8f;
-    private bool runningAway;
+    private bool stop;
     public Transform projectileSpawnLocation;
     public GameObject projectile;
     public float projectileSpeed = 3;
-    public float cooldown = 1.3f;
+    public float cooldown = 1.3f, chargeUp = 1f;
 
-    private void Awake()
+    protected override void Start()
     {
-        setSpeedAndRange(1, 5.5f);
-    }
-
-    private void Start()
-    {
-        player = GameObject.Find("Player").transform;
-        rb = GetComponent<Rigidbody2D>();
-        EnemyManager.instance.Enemies.Add(gameObject);
-        rb.SetRotation(getAngle());
+        base.Start();
+        int range = Random.Range(4, 7);
+        tooFarDistance = range + 0.5f;
+        setSpeedAndRange(3, range);
     }
 
     public override void Movement()
     {
+        if(shouldRotate && isAttacking) rb.SetRotation(angleToTarget);
+
         if (isAttacking) return;
 
-        setDistAndDir();
-
-        float angle = getAngle();
         float speed = runawaySpeed;
 
-        if (distance < rangeDistance)
+        if (distance <= rangeDistance && !stop)
         {
-            runningAway = true;
-            float oppositeAngle = angle + 180f;
+            float oppositeAngle = angleToTarget + 180f;
             rb.SetRotation(oppositeAngle);
+            animator.SetBool("isWalking", true);
             rb.linearVelocity = transform.right * speed;
         }
-        else if (distance >= rangeDistance && distance <= tooFarDistance)
+        else if (distance <= tooFarDistance)
+        {
+            stop = false;
+            halt();
+            rb.SetRotation(angleToTarget);
+            if (canAttack && !isAttacking)
+            {
+                animator.SetBool("isWalking", false);
+                animator.Play("YetiAttackingAnim");
+                animator.SetBool("isAttacking", true);
+                StartCoroutine(AttackCrt());
+            }
+        }
+        else
         {
             halt();
-            rb.SetRotation(angle);
-            if (canAttack && !isAttacking) StartCoroutine(AttackCrt());
-        }
-
-        if(distance > tooFarDistance)
-        {
-            runningAway = false;
+            stop = false;
             speed = chaseSpeed;
-            rb.SetRotation(angle);
+            rb.SetRotation(angleToTarget);
+            animator.SetBool("isAttacking", false);
+            animator.SetBool("isWalking", true);
             rb.linearVelocity = transform.right * speed;
         }
     }
@@ -61,11 +64,16 @@ public class YetiScript : EnemyScript
     protected override IEnumerator AttackCrt()
     {
         isAttacking = true;
-        shouldRotate = false;
         canAttack = false;
+        yield return new WaitForSeconds(chargeUp);
+        //shouldRotate = false;
+        shouldRotate = true;
         GameObject shotProjectile = Instantiate(projectile, projectileSpawnLocation.position, transform.rotation);
         Rigidbody2D shotProjectileRb = shotProjectile.GetComponent<Rigidbody2D>();
         shotProjectileRb.linearVelocity = getDirection(player) * projectileSpeed;
+        yield return new WaitForSeconds(0.4f);
+        animator.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(0.1f);
         isAttacking = false;
         shouldRotate = true;
         yield return new WaitForSeconds(cooldown);
@@ -75,5 +83,12 @@ public class YetiScript : EnemyScript
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.Equals("border")) halt();
+        stop = true;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("border")) halt();
+        stop = true;
     }
 }

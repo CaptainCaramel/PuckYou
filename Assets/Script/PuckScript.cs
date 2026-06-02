@@ -77,8 +77,6 @@ public class PuckScript : MonoBehaviour
         return closest;
     }
 
-
-
     private void returnPuck(PlayerMovement pm)
     {
         pm.StartCoroutine(pm.puckReturn());
@@ -95,6 +93,7 @@ public class PuckScript : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        print("collided");
         EnemyScript enemyScript = collision.transform.root.GetComponent<EnemyScript>();
         PlayerMovement pm = collision.transform.root.GetComponent<PlayerMovement>();
 
@@ -110,7 +109,6 @@ public class PuckScript : MonoBehaviour
             {
                 returnObj = PlayerMovement.instance.gameObject;
             }
-
         }
 
         if (!spinMode)

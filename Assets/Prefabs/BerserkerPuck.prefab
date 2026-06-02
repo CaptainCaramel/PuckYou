@@ -298,7 +298,7 @@ MonoBehaviour:
   damage: 1
   sendOnAwake: 1
   spinMode: 0
-  returnObj: {fileID: 0}
+  returnObj: {fileID: 7745641984099150858}
 --- !u!50 &7048131091350983387
 Rigidbody2D:
   serializedVersion: 5

@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: f78c8e21620ee9d499ed3012014edd5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8038214319431692318
+    second: GrayWolfAttack_0
+  - first:
+      213: -1557513231593974513
+    second: GrayWolfAttack_1
+  - first:
+      213: 3018760270947546313
+    second: GrayWolfAttack_2
+  - first:
+      213: -1150841256406650542
+    second: GrayWolfAttack_3
+  - first:
+      213: -3047219411536586779
+    second: GrayWolfAttack_4
+  - first:
+      213: 8091749798503930236
+    second: GrayWolfAttack_5
+  - first:
+      213: 92822203513963599
+    second: GrayWolfAttack_6
+  - first:
+      213: 6716583474076767650
+    second: GrayWolfAttack_7
+  - first:
+      213: -2649206085907002365
+    second: GrayWolfAttack_8
+  - first:
+      213: 9146216047705111124
+    second: GrayWolfAttack_9
+  - first:
+      213: 1795571767007138441
+    second: GrayWolfAttack_10
+  - first:
+      213: 7660467201341660882
+    second: GrayWolfAttack_11
+  - first:
+      213: 1467085450381743300
+    second: GrayWolfAttack_12
+  - first:
+      213: -6430649392853810327
+    second: GrayWolfAttack_13
+  - first:
+      213: 6504375558205146692
+    second: GrayWolfAttack_14
+  - first:
+      213: 1411211197674104927
+    second: GrayWolfAttack_15
+  - first:
+      213: 1749573967412434533
+    second: GrayWolfAttack_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GrayWolfAttack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efc0dd2aa6827090800000000000000
+      internalID: -8038214319431692318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05ded9c7f9926ae0800000000000000
+      internalID: -1557513231593974513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4f3ebe87ac4e920800000000000000
+      internalID: 3018760270947546313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_3
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 251740789f36700f0800000000000000
+      internalID: -1150841256406650542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_4
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7dfae071a16b5d0800000000000000
+      internalID: -3047219411536586779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c795a2fd19bab4070800000000000000
+      internalID: 8091749798503930236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_6
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4408b36d45c94100800000000000000
+      internalID: 92822203513963599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a5da9c6519163d50800000000000000
+      internalID: 6716583474076767650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30cc5b8d9112c3bd0800000000000000
+      internalID: -2649206085907002365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayWolfAttack_9
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 28
+        height: 37
+      alignment: 9
+      pivot: {x: 0.46428573, y: 0.35135135}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45ab0726903edee70800000000000000
+      internalID: 9146216047705111124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 56d3c1f029bbf7b47b69938fbceccd64
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":1.0},"gridSpriteSize":{"x":28.0,"y":37.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      GrayWolfAttack_0: -8038214319431692318
+      GrayWolfAttack_1: -1557513231593974513
+      GrayWolfAttack_2: 3018760270947546313
+      GrayWolfAttack_3: -1150841256406650542
+      GrayWolfAttack_4: -3047219411536586779
+      GrayWolfAttack_5: 8091749798503930236
+      GrayWolfAttack_6: 92822203513963599
+      GrayWolfAttack_7: 6716583474076767650
+      GrayWolfAttack_8: -2649206085907002365
+      GrayWolfAttack_9: 9146216047705111124
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

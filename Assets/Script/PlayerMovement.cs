@@ -112,13 +112,13 @@ public class PlayerMovement : MonoBehaviour
 
 
     protected virtual void Update()
-    { 
-        if(!aimLocked)handleAim();
+    {
+        if (!movementLocked) handleMovement();
     }
 
     private void FixedUpdate()
     {
-        if (!movementLocked) handleMovement();
+        if (!aimLocked) handleAim();
     }
 
     void handleAim()

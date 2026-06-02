@@ -8,18 +8,22 @@ public class SnowmanScript : EnemyScript
     public float projectileSpeed = 5;
     public float cooldown = 1.3f;
 
-    private void Awake()
+    protected override void Start()
     {
-        setSpeedAndRange(3, 2);
+        base.Start();
+        setSpeedAndRange(2, 4f);
+        fov = 15f;
     }
 
     protected override IEnumerator AttackCrt()
     {
-        GameObject shotProjectile = Instantiate(projectile, projectileSpawnLocation.position, transform.rotation);
+        yield return new WaitForSeconds(0.7f);
+        GameObject shotProjectile = Instantiate(projectile, projectileSpawnLocation.position, Quaternion.Euler(0,0,angleToTarget - 90));
         Rigidbody2D shotProjectileRb = shotProjectile.GetComponent<Rigidbody2D>();
         shotProjectileRb.linearVelocity = getDirection(player) * projectileSpeed;
         isAttacking = false;
         shouldRotate = true;
+        animator.SetBool("isIdling", true);
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
     }

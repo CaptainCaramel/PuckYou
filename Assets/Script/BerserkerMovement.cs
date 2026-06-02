@@ -45,16 +45,13 @@ public class BerserkerMovement : PlayerMovement
         dashSlider.value = dashCharge;
     }
 
-
-
     private IEnumerator dash()
     {
-
         isDashing = true;
         lockMovement(true);
 
         dashHitBox.SetActive(true);
-        rb.AddForce(transform.right *  dashForce * dashCharge * 250);
+        rb.AddForce(transform.right *  dashForce * dashCharge * 200);
         dashCharge = 0;
         dashSlider.value = 0;
 

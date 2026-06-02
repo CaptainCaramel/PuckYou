@@ -5,18 +5,28 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    protected Transform player;
-    protected float speed = 3, rangeDistance = 2;
-    protected bool canAttack = true, isAttacking, shouldRotate = true;
-    protected Rigidbody2D rb;
-    protected float distance;
     protected Vector2 direction;
+    protected Transform player;
+    protected Rigidbody2D rb;
+    protected Animator animator;
+    protected float speed, rangeDistance;
+    protected float angleToTarget, fov = 1, rotationSpeed = 270f;
+    protected float distance;
+    protected bool canAttack = true, isAttacking, shouldRotate = true, awake;
+    public GameObject deathParticles;
 
-    private void Start()
+    private void Awake()
     {
         player = GameObject.Find("Player").transform;
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+
+    protected virtual void Start()
+    {
         EnemyManager.instance.Enemies.Add(gameObject);
+        snapAtTarget(player);
+        StartCoroutine(wakeUp());
     }
 
     private void OnDestroy()
@@ -26,39 +36,49 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void FixedUpdate()
     {
+        if (!awake) return;
+        updateTargetData(player);
         Movement();
     }
 
     public virtual void Movement()
     {
-        if (isAttacking) return;
+        if (shouldRotate) lookAt(angleToTarget);
 
-        setDistAndDir();
+        if (isAttacking || !isLookingAt())
+        {
+            halt();
+            return;
+        }
 
-        if (shouldRotate) rb.SetRotation(getAngle());
 
         if (distance > rangeDistance)
         {
+            animator.SetBool("isIdling", true);
             rb.linearVelocity = direction * speed;
         }
         else
         {
-            halt();
-
-            if(!isAttacking && canAttack)
+            if (!isAttacking && canAttack)
             {
-                isAttacking = true;
-                canAttack = false;
-                shouldRotate = false;
                 Attack();
             }
         }
     }
 
-    public void setDistAndDir()
+    /*
+    public void setDistDirAngle()
     {
         distance = getDistance();
         direction = getDirection(player);
+    }
+    */
+
+    public void updateTargetData(Transform target)
+    {
+        direction = getDirection(target);
+        distance = getDistance(target);
+        angleToTarget = getAngle(direction);
     }
 
     public Vector2 getDirection(Transform target)
@@ -66,12 +86,12 @@ public class EnemyScript : MonoBehaviour
         return (target.position - transform.position).normalized;
     }
 
-    public float getDistance()
+    public float getDistance(Transform target)
     {
-        return Vector2.Distance(transform.position, player.position); 
+        return Vector2.Distance(transform.position, target.position); 
     }
 
-    public float getAngle()
+    public float getAngle(Vector2 direction)
     {
         return Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; ;
     }
@@ -87,6 +107,32 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.tag.Equals("puck")) death();
     }
 
+    protected void lookAt(float targetAngle)
+    {
+        float currentAngle = transform.eulerAngles.z;
+        float newAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, rotationSpeed * Time.deltaTime);
+        rb.rotation = newAngle;
+    }
+
+    protected void snapAtTarget(Transform target)
+    {
+        updateTargetData(target);
+        rb.rotation = angleToTarget;
+    }
+
+    protected bool isLookingAt()
+    {
+        float angleBeetwen = Vector2.Angle(transform.right, direction);
+        return angleBeetwen < (fov / 2f);
+    }
+
+    protected IEnumerator wakeUp()
+    {
+        yield return new WaitForSeconds(0.2f);
+        awake = true;
+        yield break;
+    }
+
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -94,6 +140,9 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void Attack()
     {
+        isAttacking = true;
+        canAttack = false;
+        animator.SetBool("isIdling", false);
         StartCoroutine(AttackCrt());
     }
 
@@ -104,12 +153,14 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void death()
     {
+        Instantiate(deathParticles, this.transform.position, Quaternion.identity);
+        EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
     }
 
     public void damage(int damage)
     {
-        //hp -= damage
+        death();
     }
 
     public void halt()
