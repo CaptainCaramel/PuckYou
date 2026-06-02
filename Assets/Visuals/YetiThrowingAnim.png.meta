@@ -1,0 +1,670 @@
+fileFormatVersion: 2
+guid: 3f8f1ee5ff654d74694b41fe0505c47d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1787591370315824852
+    second: YetiThrowingAnim_0
+  - first:
+      213: -8578367122990181175
+    second: YetiThrowingAnim_1
+  - first:
+      213: -1912878098025564334
+    second: YetiThrowingAnim_2
+  - first:
+      213: -660977826578691225
+    second: YetiThrowingAnim_3
+  - first:
+      213: -3015198066330388541
+    second: YetiThrowingAnim_4
+  - first:
+      213: -4961059828106771655
+    second: YetiThrowingAnim_5
+  - first:
+      213: -1863940101343492888
+    second: YetiThrowingAnim_6
+  - first:
+      213: -4775324956020898449
+    second: YetiThrowingAnim_7
+  - first:
+      213: 8432135595888045638
+    second: YetiThrowingAnim_8
+  - first:
+      213: 6340906279392832400
+    second: YetiThrowingAnim_9
+  - first:
+      213: -2243988694274678008
+    second: YetiThrowingAnim_10
+  - first:
+      213: 7007428878057672534
+    second: YetiThrowingAnim_11
+  - first:
+      213: -2305863236422332742
+    second: YetiThrowingAnim_12
+  - first:
+      213: 3802594577950385042
+    second: YetiThrowingAnim_13
+  - first:
+      213: -6095890305001508295
+    second: YetiThrowingAnim_14
+  - first:
+      213: -5842882241823987309
+    second: YetiThrowingAnim_15
+  - first:
+      213: 7511917983879998064
+    second: YetiThrowingAnim_16
+  - first:
+      213: -2053410525608414876
+    second: YetiThrowingAnim_17
+  - first:
+      213: -1588011217410170104
+    second: YetiThrowingAnim_18
+  - first:
+      213: 7686464648222941048
+    second: YetiThrowingAnim_19
+  - first:
+      213: -3271468755325008091
+    second: YetiThrowingAnim_20
+  - first:
+      213: 4615963508563394066
+    second: YetiThrowingAnim_21
+  - first:
+      213: 1998039656298882416
+    second: YetiThrowingAnim_22
+  - first:
+      213: 7882556463271303352
+    second: YetiThrowingAnim_23
+  - first:
+      213: 4816989488250489336
+    second: YetiThrowingAnim_24
+  - first:
+      213: 8661493057656737728
+    second: YetiThrowingAnim_25
+  - first:
+      213: 4084659254246641672
+    second: YetiThrowingAnim_26
+  - first:
+      213: -6329934179525465679
+    second: YetiThrowingAnim_27
+  - first:
+      213: 7880803646659980560
+    second: YetiThrowingAnim_28
+  - first:
+      213: -433670938541747863
+    second: YetiThrowingAnim_29
+  - first:
+      213: -7654904264508667004
+    second: YetiThrowingAnim_30
+  - first:
+      213: -8326887101185690538
+    second: YetiThrowingAnim_31
+  - first:
+      213: 1044396607581595820
+    second: YetiThrowingAnim_32
+  - first:
+      213: -3551705433688240787
+    second: YetiThrowingAnim_33
+  - first:
+      213: 6222010035595301459
+    second: YetiThrowingAnim_34
+  - first:
+      213: -745369266394071384
+    second: YetiThrowingAnim_35
+  - first:
+      213: -7897056299088293400
+    second: YetiThrowingAnim_36
+  - first:
+      213: 6261532914255169993
+    second: YetiThrowingAnim_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YetiThrowingAnim_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2185c8ae133137e0800000000000000
+      internalID: -1787591370315824852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 114
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c4d7414d8483f880800000000000000
+      internalID: -8578367122990181175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 114
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257bf8431871475e0800000000000000
+      internalID: -1912878098025564334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_3
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 114
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b0e523b2cb3d6f0800000000000000
+      internalID: -660977826578691225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 114
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c7bee8755dd726d0800000000000000
+      internalID: -3015198066330388541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9334c340f56c62bb0800000000000000
+      internalID: -4961059828106771655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 76
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4c0d87a54f126e0800000000000000
+      internalID: -1863940101343492888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_7
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 76
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f650155d043aabdb0800000000000000
+      internalID: -4775324956020898449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 76
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e65da26a6f40570800000000000000
+      internalID: 8432135595888045638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_9
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 76
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09be0416aac6ff750800000000000000
+      internalID: 6340906279392832400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803e3c5fb20cbd0e0800000000000000
+      internalID: -2243988694274678008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_11
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 38
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f017900736f3160800000000000000
+      internalID: 7007428878057672534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 38
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe0a6c7a9defffd0800000000000000
+      internalID: -2305863236422332742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_13
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 38
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2932f832f9785c430800000000000000
+      internalID: 3802594577950385042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 38
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93233a4a01c076ba0800000000000000
+      internalID: -6095890305001508295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399a4a7de89e9eea0800000000000000
+      internalID: -5842882241823987309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_16
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a29034b91bf3860800000000000000
+      internalID: 7511917983879998064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_17
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461ff03a102d083e0800000000000000
+      internalID: -2053410525608414876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YetiThrowingAnim_18
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8036eee163046f9e0800000000000000
+      internalID: -1588011217410170104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ab58822fe0a59d54084c517edac0dd2d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":4.0},"gridSpriteSize":{"x":65.0,"y":38.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      YetiThrowingAnim_0: -1787591370315824852
+      YetiThrowingAnim_1: -8578367122990181175
+      YetiThrowingAnim_10: -2243988694274678008
+      YetiThrowingAnim_11: 7007428878057672534
+      YetiThrowingAnim_12: -2305863236422332742
+      YetiThrowingAnim_13: 3802594577950385042
+      YetiThrowingAnim_14: -6095890305001508295
+      YetiThrowingAnim_15: -5842882241823987309
+      YetiThrowingAnim_16: 7511917983879998064
+      YetiThrowingAnim_17: -2053410525608414876
+      YetiThrowingAnim_18: -1588011217410170104
+      YetiThrowingAnim_2: -1912878098025564334
+      YetiThrowingAnim_3: -660977826578691225
+      YetiThrowingAnim_4: -3015198066330388541
+      YetiThrowingAnim_5: -4961059828106771655
+      YetiThrowingAnim_6: -1863940101343492888
+      YetiThrowingAnim_7: -4775324956020898449
+      YetiThrowingAnim_8: 8432135595888045638
+      YetiThrowingAnim_9: 6340906279392832400
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
