@@ -57,7 +57,7 @@ public class EnemyManager : MonoBehaviour
     {
         killCount++;
         rotation += 4;
-        clock.transform.rotation = Quaternion.Euler(0,0,rotation);
+        //clock.transform.rotation = Quaternion.Euler(0,0,rotation);
     }
 
     private IEnumerator spawning()
@@ -65,7 +65,7 @@ public class EnemyManager : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(waitTime);
-            if (EnemyManager.instance.Enemies.Count == 15) continue;
+            if (EnemyManager.instance.Enemies.Count >= 15) continue;
             for(int i = 0; i <= spawnAmount; i++)
             {
                 int toSpawn = Random.Range(0, EnemiesToSpawn.Count - 1);

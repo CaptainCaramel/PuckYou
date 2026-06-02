@@ -16,7 +16,7 @@ public class YetiScript : EnemyScript
     protected override void Start()
     {
         base.Start();
-        int range = Random.Range(4, 7);
+        int range = Random.Range(4, 8);
         tooFarDistance = range + 0.5f;
         setSpeedAndRange(3, range);
     }

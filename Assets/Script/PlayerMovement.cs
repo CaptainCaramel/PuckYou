@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("HP")]
 
-    [SerializeField] private int hp = 5;
+    [SerializeField] private int hp = 100;
     [SerializeField] private float invTime = 1f;
     private bool invincible = false;
     //private spriteFlashScript sFlash;
@@ -291,6 +291,10 @@ public class PlayerMovement : MonoBehaviour
         {
             startAction(damage(1));
         }
-    }
 
+        if(collision.gameObject.tag == "oneHit") damage(5);
+        else if(collision.gameObject.tag == "twoHit") damage(10);
+        else if(collision.gameObject.tag == "threeHit") damage(15);
+        else if(collision.gameObject.tag == "fourHit") damage(20);
+    }
 }

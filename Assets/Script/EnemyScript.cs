@@ -17,21 +17,21 @@ public class EnemyScript : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
 
     protected virtual void Start()
     {
-        EnemyManager.instance.Enemies.Add(gameObject);
+        player = PlayerMovement.instance.gameObject.transform;
+       // EnemyManager.instance.Enemies.Add(gameObject);
         snapAtTarget(player);
         StartCoroutine(wakeUp());
     }
 
     private void OnDestroy()
     {
-        EnemyManager.instance.Enemies.Remove(gameObject);
+       // EnemyManager.instance.Enemies.Remove(gameObject);
     }
 
     protected virtual void FixedUpdate()
