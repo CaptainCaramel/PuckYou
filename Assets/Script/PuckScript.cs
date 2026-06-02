@@ -1,56 +1,58 @@
+using System.Collections;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PuckScript : MonoBehaviour
 {
 
-    Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
-    [SerializeField] private float speed = 10f;
+    [SerializeField] protected float speed = 10f;
     [SerializeField] private float returnSpeed = 14.5f;
     [SerializeField] private float returnSpeedIncrement = 3.5f;
 
     public int damage = 1;
 
-    [SerializeField] private bool sendOnAwake = true;
-    [SerializeField] private bool spinMode = false;
+    [SerializeField] protected bool sendOnAwake = true;
 
-    private float currReturnSpeed;
+    protected bool collectable = false;
+    [SerializeField] private float spawnTime = 0.25f;
+
+    protected ParticleSystem trailParticle;
+
+    protected float currReturnSpeed;
 
     public GameObject returnObj;
 
-    private bool returnMode;
+    protected bool returnMode;
     private Vector3 moveDir;
 
     //amp, freq, time
-    private Vector3 hitShake = new Vector3(0.1f, 0.4f, 0.075f);
+    protected Vector3 hitShake = new Vector3(0.1f, 0.4f, 0.075f);
 
-    private float _larpAmount;
+    protected CamShakerScript camShakerScript;
 
-    private CamShakerScript camShakerScript;
-
-    private void Awake()
+    protected virtual void Awake()
     {
         returnMode = false;
+        collectable = false;
         rb = GetComponent<Rigidbody2D>();
         camShakerScript = GetComponent<CamShakerScript>();
 
+        trailParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
 
-        if(sendOnAwake || !spinMode) rb.AddForce(speed * transform.right);
+
+        
 
         currReturnSpeed = returnSpeed;
+
+        StartCoroutine(spawnProtection());
     }
 
-    private void Update()
+    private IEnumerator spawnProtection()
     {
-        if (returnMode && !spinMode)
-        {
-            Vector3 dir = (returnObj.transform.position - transform.position).normalized;
-
-            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            rb.rotation = angle;
-
-        }
+        yield return new WaitForSeconds(spawnTime);
+        collectable = true;
     }
 
     public GameObject FindClosestObject(GameObject[] targets)
@@ -79,17 +81,24 @@ public class PuckScript : MonoBehaviour
 
 
 
-    private void returnPuck(PlayerMovement pm)
+    protected void returnPuck(PlayerMovement pm)
     {
         pm.StartCoroutine(pm.puckReturn());
+        trailParticle.transform.parent = null;
+        trailParticle.Stop();
         Destroy(gameObject);
     }
 
     private void FixedUpdate()
     {
-        if (returnMode && !spinMode)
+        if (returnMode)
         {
-            rb.linearVelocity = transform.right * currReturnSpeed;
+            Vector3 dir = (returnObj.transform.position - transform.position).normalized;
+
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            rb.rotation = angle;
+
+            rb.linearVelocity = transform.right * currReturnSpeed;         
         }
     }
 
@@ -98,29 +107,24 @@ public class PuckScript : MonoBehaviour
         EnemyScript enemyScript = collision.transform.root.GetComponent<EnemyScript>();
         PlayerMovement pm = collision.transform.root.GetComponent<PlayerMovement>();
 
-        if (returnMode)
+        if (collectable && collision.transform.root.gameObject == returnObj && pm != null && !pm.isEing)
         {
-            if (collision.transform.root.gameObject == returnObj && pm != null)
-            {
-                returnPuck(pm);
-                return;
-            }
+            returnPuck(pm);
+            return;
+        }
 
-            else if (enemyScript != null)
-            {
-                returnObj = PlayerMovement.instance.gameObject;
-            }
-
+        if (returnMode && enemyScript != null)
+        {
+            returnObj = PlayerMovement.instance.gameObject;
         }
 
 
-        if (!spinMode)
+        if (enemyScript != null)
         {
+            enemyScript.damage(damage);
             currReturnSpeed += returnSpeedIncrement;
             returnMode = true;
         }
-
-        if(enemyScript != null)enemyScript.damage(damage);
         camShakerScript.StartShake(hitShake);
     }
 }

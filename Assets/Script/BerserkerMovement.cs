@@ -17,7 +17,7 @@ public class BerserkerMovement : PlayerMovement
 
     [SerializeField] private GameObject dashHitBox;
 
-    private bool isDashing = false; 
+    public bool isDashing = false; 
 
     [SerializeField] private float spinTime = 1.4f;
     [SerializeField] private float spinCooldown = 2f;
@@ -27,8 +27,17 @@ public class BerserkerMovement : PlayerMovement
     protected override void OnEnable()
     {
         base.OnEnable();
+        ability1 = pl_controls.Berserker.Ability1;
+        ability2 = pl_controls.Berserker.Ability2;
+        ulti = pl_controls.Berserker.Ulti;
+
+        enableAttacksInputs();
+
+        ability1.performed += Attack_QAction;
         ability2.started += Attack_EStarted;
         ability2.canceled += Attack_EAction;
+        ulti.performed += Attack_UltAction;
+
     }
 
     protected override void Update()
@@ -49,11 +58,13 @@ public class BerserkerMovement : PlayerMovement
 
     private IEnumerator dash()
     {
-
+        isEing = true;
         isDashing = true;
+        dashSlider.gameObject.SetActive(false);
         lockMovement(true);
 
         dashHitBox.SetActive(true);
+
         rb.AddForce(transform.right *  dashForce * dashCharge * 250);
         dashCharge = 0;
         dashSlider.value = 0;
@@ -63,6 +74,7 @@ public class BerserkerMovement : PlayerMovement
 
         unlockMovement();
         isDashing = false;
+        isEing = false;
 
         yield return new WaitForSeconds(dashCooldown);
     }
@@ -103,6 +115,7 @@ public class BerserkerMovement : PlayerMovement
     protected virtual void Attack_EStarted(InputAction.CallbackContext callbackContext)
     {
         isChargingDash = true;
+        dashSlider.gameObject.SetActive(true);
     }
 
     protected override void Attack_EAction(InputAction.CallbackContext callbackContext)

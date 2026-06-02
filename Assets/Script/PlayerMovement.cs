@@ -21,17 +21,17 @@ public class PlayerMovement : MonoBehaviour
     protected bool isAttacking, attackAvailable;
     protected bool aimLocked = false;
 
-    protected bool isQing, isEing, isUlting;
+    public bool isQing, isEing, isUlting;
     protected bool q_onCooldown, e_onCooldown, ult_onCooldown;
 
     [SerializeField] private GameObject puckPrefab;
-    [SerializeField] private Transform puckTransform;
+    [SerializeField] protected Transform puckTransform;
     [SerializeField] protected Animator spinAnimator;
 
 
     [Header("Controls")]
 
-    [SerializeField] private InputSystem_Actions pl_controls;
+    [SerializeField] protected InputSystem_Actions pl_controls;
     [HideInInspector] public InputAction move, jump, attack, ability1, ability2, ulti;
 
     public Coroutine currentAction;
@@ -74,12 +74,7 @@ public class PlayerMovement : MonoBehaviour
     {
         move = pl_controls.Player.Move;
         attack = pl_controls.Player.Attack;
-        ability1 = pl_controls.Player.Ability1;
-        ability2 = pl_controls.Player.Ability2;
-        ulti = pl_controls.Player.Ulti;
-        
-
-        InputAction[] inputActions = { move, jump, attack, ability1, ability2, ulti};
+        InputAction[] inputActions = { move, attack };
 
         foreach (InputAction action in inputActions)
         {
@@ -88,15 +83,22 @@ public class PlayerMovement : MonoBehaviour
 
 
         attack.performed += Attack_RegAction;
-        ability1.performed += Attack_QAction;
-        ability2.performed += Attack_EAction;
-        ulti.performed += Attack_UltAction;
+    }
+
+    protected virtual void enableAttacksInputs()
+    {
+        InputAction[] inputActions = { ability1, ability2, ulti };
+
+        foreach (InputAction action in inputActions)
+        {
+            action.Enable();
+        }
     }
 
 
     private void OnDisable()
     {
-        InputAction[] inputActions = { move, jump, attack, ability1, ability2, ulti };
+        InputAction[] inputActions = { move, attack, ability1, ability2, ulti };
 
         foreach (InputAction action in inputActions)
         {
@@ -113,12 +115,13 @@ public class PlayerMovement : MonoBehaviour
 
     protected virtual void Update()
     { 
-        if(!aimLocked)handleAim();
+        
     }
 
     private void FixedUpdate()
     {
         if (!movementLocked) handleMovement();
+        if (!aimLocked) handleAim();
     }
 
     void handleAim()
@@ -126,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector3 aimDirection = (mousePos - transform.position).normalized;
         float angle = (Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg);
-        transform.eulerAngles = new Vector3(0, 0, angle);
+        rb.SetRotation(angle);
     }
 
     private void handleMovement()
@@ -237,25 +240,17 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void exitInteraction()
-    {
-        pl_controls.Player.Enable();
-        currentAction = null;
-    }
-
-
-
-    private bool CanQ()
+    protected bool CanQ()
     {
         return !q_onCooldown && isQing && CanAttack(); 
     }
 
-    private bool CanE()
+    protected bool CanE()
     {
         return true;
     }
 
-    private bool CanR()
+    protected bool CanR()
     {
         return true;
     }
@@ -268,15 +263,9 @@ public class PlayerMovement : MonoBehaviour
         startAction(attack_Regular());
     }
 
-    private void test(InputAction.CallbackContext callbackContext)
-    {
-        print("asd");
-    }
-
     protected virtual void Attack_QAction(InputAction.CallbackContext callbackContext) 
     {
         if(!CanQ()) return;
-        print("baseQ");
     }
 
     protected virtual void Attack_EAction(InputAction.CallbackContext callbackContext)

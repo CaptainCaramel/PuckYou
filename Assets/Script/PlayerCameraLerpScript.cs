@@ -5,7 +5,7 @@ public class PlayerCameraLerpScript : MonoBehaviour
 {
     [SerializeField] private Transform player;
     [SerializeField] private float lerp;
-    private void Update()
+    private void FixedUpdate()
     {
         Vector2 mousePos = Mouse.current.position.ReadValue();
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
