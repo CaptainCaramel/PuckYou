@@ -31,6 +31,7 @@ public class IceMemphitScript : EnemyScript
         if (!StopFollow)
         {
             rb.linearVelocity = transform.right * speed;
+            print("abc");
         }
         else
         {
