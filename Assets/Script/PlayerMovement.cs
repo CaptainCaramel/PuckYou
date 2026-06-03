@@ -1,17 +1,14 @@
- System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using Unity.VisualScripting;
-using UnityEngine;
+using System;
 using UnityEngine.InputSystem;
+using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Movement")]
 
-    [SerializeField] private float baseSpeed = 10f, nonBaseSpeed, fallBackSpeed;
+    [SerializeField] protected float baseSpeed = 10f, nonBaseSpeed, fallBackSpeed;
     protected bool movementLocked = false;
     protected Rigidbody2D rb;
 
@@ -43,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float invTime = 1f;
     private bool invincible = false;
     //private spriteFlashScript sFlash;
-    
+
 
     [Header("VFX")]
     [SerializeField]
@@ -52,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] protected ShakeSelfScript shakeSelfScript;
 
     //Amp, Freq, Time
-    private Vector3 damageShake = new Vector3( 3f, 0.2f, 0.1f);
+    private Vector3 damageShake = new Vector3(3f, 0.2f, 0.1f);
 
     [Header("Dev")]
     [SerializeField]
@@ -139,8 +136,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     protected virtual void Update()
-    { 
-        
+    {
+
     }
 
     private void FixedUpdate()
@@ -177,7 +174,7 @@ public class PlayerMovement : MonoBehaviour
 
     //private bool CanDash()
     //{
-       // return !isDashing && dashAvailable && !isAttacking;
+    // return !isDashing && dashAvailable && !isAttacking;
     //}
 
     private bool CanAttack()
@@ -189,12 +186,12 @@ public class PlayerMovement : MonoBehaviour
     protected void lockMovement(bool resetSpeed)
     {
         movementLocked = true;
-        if(resetSpeed)rb.linearVelocity = Vector3.zero;
+        if (resetSpeed) rb.linearVelocity = Vector3.zero;
     }
 
     protected void unlockMovement()
     {
-        movementLocked = false; 
+        movementLocked = false;
     }
 
     private void resetMovement()
@@ -204,7 +201,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator attack_Regular()
     {
-        if(!CanAttack()) yield break;
+        if (!CanAttack()) yield break;
 
 
         attackAvailable = false;
@@ -213,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
         //if (onPlayerAttack != null) onPlayerAttack();
 
         //Attack Code
-        GameObject puck = Instantiate(puckPrefab, puckTransform.position , puckTransform.rotation);
+        GameObject puck = Instantiate(puckPrefab, puckTransform.position, puckTransform.rotation);
         //puck.GetComponent<PuckScript>().returnObj = gameObject;
         puckHover.SetActive(false);
 
@@ -262,7 +259,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (currentAction != null) return;
         currentAction = StartCoroutine(action);
-    
+
     }
 
     private void handleAttacked()
@@ -277,7 +274,7 @@ public class PlayerMovement : MonoBehaviour
 
     protected virtual bool CanQ()
     {
-        return !q_onCooldown && !isQing; 
+        return !q_onCooldown && !isQing;
     }
 
     protected virtual bool CanE()
@@ -298,9 +295,9 @@ public class PlayerMovement : MonoBehaviour
         startAction(attack_Regular());
     }
 
-    protected virtual void Attack_QAction(InputAction.CallbackContext callbackContext) 
+    protected virtual void Attack_QAction(InputAction.CallbackContext callbackContext)
     {
-        if(!CanQ()) return;
+        if (!CanQ()) return;
     }
 
     protected virtual void Attack_EAction(InputAction.CallbackContext callbackContext)
@@ -331,7 +328,7 @@ public class PlayerMovement : MonoBehaviour
         */
         print("collision with " + tag);
         print("collision with name: " + collision.gameObject.name);
-        if (tag.Contains("Hit")) 
+        if (tag.Contains("Hit"))
         {
             int damageDeal = 0;
             if (tag.Equals("oneHit")) damageDeal = 4;
@@ -339,16 +336,16 @@ public class PlayerMovement : MonoBehaviour
             else if (tag.Equals("threeHit")) damageDeal = 15;
             else if (tag.Equals("fourHit")) damageDeal = 18;
             StartCoroutine(damage(damageDeal));
-            if(collision.gameObject.name != "bite" && collision.gameObject.name != "Punch") Destroy(collision.gameObject);
+            if (collision.gameObject.name != "bite" && collision.gameObject.name != "Punch") Destroy(collision.gameObject);
         }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Slower")
+        if (collision.gameObject.tag == "Slower")
         {
             yinulisGamgisAnimator.Play("IceFadeIn");
-            baseSpeed = nonBaseSpeed; 
+            baseSpeed = nonBaseSpeed;
         }
     }
 
