@@ -34,8 +34,12 @@ public class PuckScript : MonoBehaviour
 
     protected CamShakerScript camShakerScript;
 
+    public static PuckScript instance;
+
     protected virtual void Awake()
     {
+        instance = this;
+
         returnMode = false;
         collectable = false;
         rb = GetComponent<Rigidbody2D>();
@@ -51,6 +55,11 @@ public class PuckScript : MonoBehaviour
         currReturnSpeed = returnSpeed;
 
         StartCoroutine(spawnProtection());
+    }
+
+    private void OnDisable()
+    {
+        instance = null;
     }
 
     private IEnumerator spawnProtection()

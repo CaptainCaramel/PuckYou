@@ -20,22 +20,21 @@ public class CameraManager : MonoBehaviour
         defaultCamSize = cm_Main.Lens.OrthographicSize;
     }
 
-    public void changeZoom(float orthSize, float speed)
+    public void changeZoom(float orthSize, float speed, bool unscaledTime)
     {
         _duration = speed;
 
         _larpAmount = cm_Main.Lens.OrthographicSize;
-        DOTween.To(GetLerpValue, SetLerpValue, orthSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete);
+        DOTween.To(GetLerpValue, SetLerpValue, orthSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete).SetUpdate(unscaledTime);
     }
 
-    public void resetZoom(float speed)
+    public void resetZoom(float speed, bool unscaledTime)
     {
-        print("a");
 
         _duration = speed;
 
         _larpAmount = cm_Main.Lens.OrthographicSize;
-        DOTween.To(GetLerpValue, SetLerpValue, defaultCamSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete);
+        DOTween.To(GetLerpValue, SetLerpValue, defaultCamSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete).SetUpdate(unscaledTime);
     }
 
     private void OnLerpUpdate()

@@ -17,7 +17,19 @@ public class BerserkerMovement : PlayerMovement
 
     [SerializeField] private GameObject dashHitBox;
 
-    public bool isDashing = false; 
+    public bool isDashing = false;
+
+    [SerializeField] private float eCooldown = 2.5f;
+
+
+    [SerializeField] private float ultTime = 20f;
+    [SerializeField] private float ultCooldown = 35f;
+    [SerializeField] private float healAmount = 4f;
+
+    [SerializeField] private float ultCamSize = 5f;
+
+    [SerializeField] private GameObject ultPucks;
+    private bool berserk;
 
     [SerializeField] private float spinTime = 1.4f;
     [SerializeField] private float spinCooldown = 2f;
@@ -105,6 +117,44 @@ public class BerserkerMovement : PlayerMovement
 
     }
 
+    private IEnumerator ultStart()
+    {
+        Time.timeScale = 0.2f;
+
+        CameraManager.instance.changeZoom(ultCamSize, 1, true);
+        VignetteControllerScript.instance.changeIntensity(0.5f, 1, true);
+        yield return new WaitForSecondsRealtime(2.5f);
+
+        Time.timeScale = 1;
+        CameraFlashScript.instance.callFlash();
+        VignetteControllerScript.instance.changeColor(Color.red);
+        CameraManager.instance.resetZoom(0, true);
+
+        StartCoroutine(berserkMode());
+    }
+
+    private IEnumerator berserkMode()
+    {
+        ultPucks.SetActive(true);
+        berserk = true;
+        yield return new WaitForSeconds(ultTime);
+        ultPucks.SetActive(false);
+        berserk = false;
+
+        CameraFlashScript.instance.callFlash();
+        VignetteControllerScript.instance.resetIntensity();
+        VignetteControllerScript.instance.changeColor(Color.black);
+
+        ult_onCooldown = true;
+        yield return new WaitForSeconds(ultCooldown);
+        ult_onCooldown= false;
+    }
+
+    public void heal(float amount)
+    {
+        //
+    }
+
 
     protected override bool CanQ()
     {
@@ -133,9 +183,10 @@ public class BerserkerMovement : PlayerMovement
 
     }
 
-    protected virtual void Attack_UltAction(InputAction.CallbackContext callbackContext)
+    protected override void Attack_UltAction(InputAction.CallbackContext callbackContext)
     {
         if (!CanR()) return;
+        StartCoroutine(ultStart());
     }
 
 }

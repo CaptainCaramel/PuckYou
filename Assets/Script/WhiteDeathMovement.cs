@@ -15,6 +15,17 @@ public class WhiteDeathMovement : PlayerMovement
     [SerializeField] private float fullQCooldown = 8;
     [SerializeField] GameObject halfChargedPuck, fullChargedPuck;
 
+    [SerializeField] GameObject bomb;
+    [SerializeField] private float eCooldown = 7;
+
+    [SerializeField] private int ultShotAmount = 5;
+    [SerializeField] private float UltCooldown = 200f;
+    [SerializeField] private float UltShootDelta = 4f;
+
+    [SerializeField] private GameObject ultShot;
+
+    [SerializeField] private float ultSpeed;
+ 
     [SerializeField] private float zoomOutCamSize = 9;
     [SerializeField] private float zoomOutCamSpeed = 1.5f;
 
@@ -31,6 +42,10 @@ public class WhiteDeathMovement : PlayerMovement
         ability1.performed += Attack_FullQ;
         ability1.canceled += Attack_ReleaseQ;
         ability1.started += Attack_StartQ;
+
+        ability2.performed += Attack_EAction;
+
+        ulti.performed += Attack_UltAction;
 
         enableAttacksInputs();
     }
@@ -51,7 +66,7 @@ public class WhiteDeathMovement : PlayerMovement
         attackAvailable = false;
         isAttacking = true;
 
-        CameraManager.instance.resetZoom(zoomOutCamSpeed / 2);
+        CameraManager.instance.resetZoom(zoomOutCamSpeed / 2, true);
 
         shakeSelfScript.stopShake();
 
@@ -102,9 +117,58 @@ public class WhiteDeathMovement : PlayerMovement
         q_onCooldown = false;
     }
 
+    private IEnumerator EAttack()
+    {
+        Transform t;
+        if (!isAttacking) t = puckTransform;
+        else t = PuckScript.instance.transform;
+
+        Instantiate(bomb, t.position, t.rotation);
+
+        e_onCooldown = true;
+        yield return new WaitForSeconds(eCooldown);
+        e_onCooldown = false;
+    }
+
+    private IEnumerator UltLife()
+    {
+        isUlting = true;
+
+        CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed, true);
+
+
+
+        for (int i = 0; i < ultShotAmount; i++)
+        {
+            yield return new WaitForSeconds(UltShootDelta);
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+            worldPos.z = 0;
+
+            Instantiate(ultShot, worldPos, Quaternion.identity);     
+        }
+
+        CameraManager.instance.resetZoom(zoomOutCamSpeed/2, true);
+
+        isUlting = false;
+
+        ult_onCooldown = true;
+        yield return new WaitForSeconds(UltCooldown);
+        ult_onCooldown = false;
+
+    }
+
+
+
+
     protected override bool CanQ()
     {
         return base.CanQ() && !isAttacking;
+    }
+
+    protected override bool CanE()
+    {
+        return base.CanE();
     }
 
     private void Attack_StartQ(InputAction.CallbackContext callbackContext)
@@ -118,7 +182,7 @@ public class WhiteDeathMovement : PlayerMovement
     {
         if (!CanQ()) return;
 
-        CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed);
+        CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed, true);
 
         isQMaxxed = true;
         shakeSelfScript.Begin();
@@ -134,5 +198,22 @@ public class WhiteDeathMovement : PlayerMovement
         isQMaxxed = false;
         isChargingQ = false;
         shootSlider.value = 0;
+    }
+
+    protected override void Attack_EAction(InputAction.CallbackContext callbackContext)
+    {
+        print("a");
+        if (!CanE() && !isQing) return;
+
+        print("a");
+        StartCoroutine(EAttack());
+
+    }
+
+    protected override void Attack_UltAction(InputAction.CallbackContext callbackContext)
+    {
+        if(!CanR()) return;
+
+        StartCoroutine(UltLife());
     }
 }

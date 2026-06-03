@@ -11,6 +11,14 @@ public class CamShakerScript : MonoBehaviour
     private CinemachineBasicMultiChannelPerlin cbmcp;
     //private CinemachinePositionComposer cbpc;
 
+    public static CamShakerScript instance;
+
+    private void Awake()
+    {
+        
+        instance = this;
+    }
+
 
     public IEnumerator shake()
     {

@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
 
-    [SerializeField] private float baseSpeed = 10f;
+    [SerializeField] protected float baseSpeed = 10f;
     protected bool movementLocked = false;
     protected Rigidbody2D rb;
 
@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("VFX")]
     [SerializeField]
     private CamShakerScript shakeCamScript;
-    [SerializeField] hardLockToTargetScript shadowScript;
 
     [SerializeField] protected ShakeSelfScript shakeSelfScript;
 
@@ -68,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
         gameObject.name = "Player";
         pl_controls = new InputSystem_Actions();
         shakeCamScript = GetComponent<CamShakerScript>();
-        shadowScript.target = this.transform;
         instance = this;
         //sFlash = GetComponent<spriteFlashScript>();
         attackAvailable = true;
