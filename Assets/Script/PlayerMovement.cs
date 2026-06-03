@@ -1,4 +1,4 @@
-using System;
+ System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Movement")]
 
-    [SerializeField] protected float baseSpeed = 10f, nonBaseSpeed, fallBackSpeed;
+    [SerializeField] private float baseSpeed = 10f, nonBaseSpeed, fallBackSpeed;
     protected bool movementLocked = false;
     protected Rigidbody2D rb;
 
