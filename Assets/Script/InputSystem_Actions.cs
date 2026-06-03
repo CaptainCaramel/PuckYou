@@ -447,34 +447,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""McConnor"",
-            ""id"": ""0d57d8cf-86f5-4938-a425-4790bd8e383a"",
-            ""actions"": [
-                {
-                    ""name"": ""New action"",
-                    ""type"": ""Button"",
-                    ""id"": ""986769a4-c54c-47a7-ab96-2b1f55a41da3"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""8cab5721-9dc3-44ad-a1b9-c1ff3f082397"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": [
@@ -554,9 +526,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         m_WhiteDeath_Ability1 = m_WhiteDeath.FindAction("Ability1", throwIfNotFound: true);
         m_WhiteDeath_Ability2 = m_WhiteDeath.FindAction("Ability2", throwIfNotFound: true);
         m_WhiteDeath_Ulti = m_WhiteDeath.FindAction("Ulti", throwIfNotFound: true);
-        // McConnor
-        m_McConnor = asset.FindActionMap("McConnor", throwIfNotFound: true);
-        m_McConnor_Newaction = m_McConnor.FindAction("New action", throwIfNotFound: true);
     }
 
     ~@InputSystem_Actions()
@@ -564,7 +533,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         UnityEngine.Debug.Assert(!m_Berserker.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Berserker.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputSystem_Actions.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_WhiteDeath.enabled, "This will cause a leak and performance issues, InputSystem_Actions.WhiteDeath.Disable() has not been called.");
-        UnityEngine.Debug.Assert(!m_McConnor.enabled, "This will cause a leak and performance issues, InputSystem_Actions.McConnor.Disable() has not been called.");
     }
 
     /// <summary>
@@ -979,102 +947,6 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="WhiteDeathActions" /> instance referencing this action map.
     /// </summary>
     public WhiteDeathActions @WhiteDeath => new WhiteDeathActions(this);
-
-    // McConnor
-    private readonly InputActionMap m_McConnor;
-    private List<IMcConnorActions> m_McConnorActionsCallbackInterfaces = new List<IMcConnorActions>();
-    private readonly InputAction m_McConnor_Newaction;
-    /// <summary>
-    /// Provides access to input actions defined in input action map "McConnor".
-    /// </summary>
-    public struct McConnorActions
-    {
-        private @InputSystem_Actions m_Wrapper;
-
-        /// <summary>
-        /// Construct a new instance of the input action map wrapper class.
-        /// </summary>
-        public McConnorActions(@InputSystem_Actions wrapper) { m_Wrapper = wrapper; }
-        /// <summary>
-        /// Provides access to the underlying input action "McConnor/Newaction".
-        /// </summary>
-        public InputAction @Newaction => m_Wrapper.m_McConnor_Newaction;
-        /// <summary>
-        /// Provides access to the underlying input action map instance.
-        /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_McConnor; }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
-        public void Enable() { Get().Enable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
-        public void Disable() { Get().Disable(); }
-        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
-        public bool enabled => Get().enabled;
-        /// <summary>
-        /// Implicitly converts an <see ref="McConnorActions" /> to an <see ref="InputActionMap" /> instance.
-        /// </summary>
-        public static implicit operator InputActionMap(McConnorActions set) { return set.Get(); }
-        /// <summary>
-        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <param name="instance">Callback instance.</param>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
-        /// </remarks>
-        /// <seealso cref="McConnorActions" />
-        public void AddCallbacks(IMcConnorActions instance)
-        {
-            if (instance == null || m_Wrapper.m_McConnorActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_McConnorActionsCallbackInterfaces.Add(instance);
-            @Newaction.started += instance.OnNewaction;
-            @Newaction.performed += instance.OnNewaction;
-            @Newaction.canceled += instance.OnNewaction;
-        }
-
-        /// <summary>
-        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
-        /// </summary>
-        /// <remarks>
-        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
-        /// </remarks>
-        /// <seealso cref="McConnorActions" />
-        private void UnregisterCallbacks(IMcConnorActions instance)
-        {
-            @Newaction.started -= instance.OnNewaction;
-            @Newaction.performed -= instance.OnNewaction;
-            @Newaction.canceled -= instance.OnNewaction;
-        }
-
-        /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="McConnorActions.UnregisterCallbacks(IMcConnorActions)" />.
-        /// </summary>
-        /// <seealso cref="McConnorActions.UnregisterCallbacks(IMcConnorActions)" />
-        public void RemoveCallbacks(IMcConnorActions instance)
-        {
-            if (m_Wrapper.m_McConnorActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        /// <summary>
-        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
-        /// </summary>
-        /// <remarks>
-        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
-        /// </remarks>
-        /// <seealso cref="McConnorActions.AddCallbacks(IMcConnorActions)" />
-        /// <seealso cref="McConnorActions.RemoveCallbacks(IMcConnorActions)" />
-        /// <seealso cref="McConnorActions.UnregisterCallbacks(IMcConnorActions)" />
-        public void SetCallbacks(IMcConnorActions instance)
-        {
-            foreach (var item in m_Wrapper.m_McConnorActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_McConnorActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    /// <summary>
-    /// Provides a new <see cref="McConnorActions" /> instance referencing this action map.
-    /// </summary>
-    public McConnorActions @McConnor => new McConnorActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -1219,20 +1091,5 @@ public partial class @InputSystem_Actions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUlti(InputAction.CallbackContext context);
-    }
-    /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "McConnor" which allows adding and removing callbacks.
-    /// </summary>
-    /// <seealso cref="McConnorActions.AddCallbacks(IMcConnorActions)" />
-    /// <seealso cref="McConnorActions.RemoveCallbacks(IMcConnorActions)" />
-    public interface IMcConnorActions
-    {
-        /// <summary>
-        /// Method invoked when associated input action "New action" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnNewaction(InputAction.CallbackContext context);
     }
 }

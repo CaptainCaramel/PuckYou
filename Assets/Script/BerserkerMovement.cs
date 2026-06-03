@@ -122,7 +122,7 @@ public class BerserkerMovement : PlayerMovement
         Time.timeScale = 0.2f;
 
         CameraManager.instance.changeZoom(ultCamSize, 1, true);
-        VignetteControllerScript.instance.changeIntensity(0.4f, 1, true);
+        VignetteControllerScript.instance.changeIntensity(0.5f, 1, true);
         yield return new WaitForSecondsRealtime(2.5f);
 
         Time.timeScale = 1;

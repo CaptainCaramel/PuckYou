@@ -69,7 +69,7 @@ public class WhiteDeathMovement : PlayerMovement
         CameraManager.instance.resetZoom(zoomOutCamSpeed / 2, true);
 
         shakeSelfScript.stopShake();
-        print("YLEE");
+
         GameObject puck = Instantiate(fullChargedPuck, puckTransform.position, puckTransform.rotation);
         puck.GetComponent<PuckScript>().returnObj = gameObject;
         WhiteDeathPuckMovement t = puck.GetComponent<WhiteDeathPuckMovement>();
@@ -163,7 +163,7 @@ public class WhiteDeathMovement : PlayerMovement
 
     protected override bool CanQ()
     {
-        return base.CanQ() && !isAttacking && attackAvailable;
+        return base.CanQ() && !isAttacking;
     }
 
     protected override bool CanE()
@@ -195,8 +195,6 @@ public class WhiteDeathMovement : PlayerMovement
         if (isQMaxxed) StartCoroutine(superQ());
         else StartCoroutine(normalQ());
 
-        shootSlider.gameObject.SetActive(false);
-
         isQMaxxed = false;
         isChargingQ = false;
         shootSlider.value = 0;
@@ -204,8 +202,10 @@ public class WhiteDeathMovement : PlayerMovement
 
     protected override void Attack_EAction(InputAction.CallbackContext callbackContext)
     {
+        print("a");
         if (!CanE() && !isQing) return;
 
+        print("a");
         StartCoroutine(EAttack());
 
     }
