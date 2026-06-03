@@ -161,7 +161,6 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void death()
     {
-        print("came in death");
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
         EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);

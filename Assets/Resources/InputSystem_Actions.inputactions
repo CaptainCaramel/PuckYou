@@ -361,6 +361,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "McConnor",
+            "id": "0d57d8cf-86f5-4938-a425-4790bd8e383a",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "986769a4-c54c-47a7-ab96-2b1f55a41da3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8cab5721-9dc3-44ad-a1b9-c1ff3f082397",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
