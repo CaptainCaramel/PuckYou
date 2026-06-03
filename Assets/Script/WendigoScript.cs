@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class WendigoScript : EnemyScript
 {
@@ -9,7 +11,6 @@ public class WendigoScript : EnemyScript
     public GameObject attHitbox;
     public float chargeUpS, chargeUpC, attackDurC, cooldownC, attackDurS, cooldownS, chargeSpeed;
     public bool isCharging, isBegin = true;
-
 
     protected override void Start()
     {

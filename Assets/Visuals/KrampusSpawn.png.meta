@@ -1,0 +1,517 @@
+fileFormatVersion: 2
+guid: 36d5980392d8fe64bb94e7ccb6eb78fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4708890985050847692
+    second: KrampusSpawn_0
+  - first:
+      213: -4458930953880620128
+    second: KrampusSpawn_1
+  - first:
+      213: -951991614386704446
+    second: KrampusSpawn_2
+  - first:
+      213: -8207721132291806841
+    second: KrampusSpawn_3
+  - first:
+      213: -5962419829045721386
+    second: KrampusSpawn_4
+  - first:
+      213: 4095407541716022948
+    second: KrampusSpawn_5
+  - first:
+      213: 4402672396326644982
+    second: KrampusSpawn_6
+  - first:
+      213: 7050765790675646540
+    second: KrampusSpawn_7
+  - first:
+      213: 4420607339617921681
+    second: KrampusSpawn_8
+  - first:
+      213: 2996631600953485851
+    second: KrampusSpawn_9
+  - first:
+      213: -7024301890591480767
+    second: KrampusSpawn_10
+  - first:
+      213: 2165877299873950304
+    second: KrampusSpawn_11
+  - first:
+      213: -3404276815251026733
+    second: KrampusSpawn_12
+  - first:
+      213: 5449527987563853856
+    second: KrampusSpawn_13
+  - first:
+      213: 6985645329718237700
+    second: KrampusSpawn_14
+  - first:
+      213: 6238215203816392310
+    second: KrampusSpawn_15
+  - first:
+      213: 1103333321705727445
+    second: KrampusSpawn_16
+  - first:
+      213: -2524058683325585439
+    second: KrampusSpawn_17
+  - first:
+      213: -8258335353793494567
+    second: KrampusSpawn_18
+  - first:
+      213: -8493025646279280335
+    second: KrampusSpawn_19
+  - first:
+      213: -7882762714689858280
+    second: KrampusSpawn_20
+  - first:
+      213: -3805462801769894036
+    second: KrampusSpawn_21
+  - first:
+      213: 5188566322219415683
+    second: KrampusSpawn_22
+  - first:
+      213: 3309357463442193071
+    second: KrampusSpawn_23
+  - first:
+      213: 7488927061651166566
+    second: KrampusSpawn_24
+  - first:
+      213: 7914768709776454747
+    second: KrampusSpawn_25
+  - first:
+      213: 1587775567995870753
+    second: KrampusSpawn_26
+  - first:
+      213: -5245560720506391812
+    second: KrampusSpawn_27
+  - first:
+      213: 3242594661564570545
+    second: KrampusSpawn_28
+  - first:
+      213: 6818679653633731853
+    second: KrampusSpawn_29
+  - first:
+      213: -1324790344344651416
+    second: KrampusSpawn_30
+  - first:
+      213: 8756869310704186433
+    second: KrampusSpawn_31
+  - first:
+      213: -3288628563248036403
+    second: KrampusSpawn_32
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KrampusSpawn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436410e0998a6aeb0800000000000000
+      internalID: -4708890985050847692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 594
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3b3fffbe1be12c0800000000000000
+      internalID: -4458930953880620128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 540
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cf645baba8d9c2f0800000000000000
+      internalID: -951991614386704446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 486
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789a746dd11581e80800000000000000
+      internalID: -8207721132291806841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d60cf771ca314da0800000000000000
+      internalID: -5962419829045721386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a67076f57fc5d830800000000000000
+      internalID: 4095407541716022948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fca775d73f691d30800000000000000
+      internalID: 4402672396326644982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 270
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48b2bb412a59d160800000000000000
+      internalID: 7050765790675646540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a296934f6295d30800000000000000
+      internalID: 4420607339617921681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1aea81709c269920800000000000000
+      internalID: 2996631600953485851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144a03895aaa48e90800000000000000
+      internalID: -7024301890591480767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06aa11ecdedbe0e10800000000000000
+      internalID: 2165877299873950304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KrampusSpawn_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc4ddde54491c0d0800000000000000
+      internalID: -3404276815251026733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: de9182c67713791429a9bb76a252d62f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":13.0},"gridSpriteSize":{"x":37.0,"y":54.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      KrampusSpawn_0: -4708890985050847692
+      KrampusSpawn_1: -4458930953880620128
+      KrampusSpawn_10: -7024301890591480767
+      KrampusSpawn_11: 2165877299873950304
+      KrampusSpawn_12: -3404276815251026733
+      KrampusSpawn_2: -951991614386704446
+      KrampusSpawn_3: -8207721132291806841
+      KrampusSpawn_4: -5962419829045721386
+      KrampusSpawn_5: 4095407541716022948
+      KrampusSpawn_6: 4402672396326644982
+      KrampusSpawn_7: 7050765790675646540
+      KrampusSpawn_8: 4420607339617921681
+      KrampusSpawn_9: 2996631600953485851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

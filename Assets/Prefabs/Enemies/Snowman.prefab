@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 32
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5766865866037416420, guid: 75c3cb0bf836c7745956e6918f1df872, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,7 +174,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -192,6 +192,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   deathParticles: {fileID: 8023007042503218261, guid: 47ea54390c76ab24ebec9058674ce4ca, type: 3}
+  spriteRenderer: {fileID: 0}
+  RangeMinus: 0
+  RangeMaximum: 0
+  shouldRandomize: 0
   projectileSpawnLocation: {fileID: 3935760737770360768}
   projectile: {fileID: 3302735451581132710, guid: 0d07ffda22eade6498d60c9cdc6b0a4a, type: 3}
   projectileSpeed: 5
@@ -364,7 +368,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 32
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3356601631602401679, guid: 7d284f0540dc15f498f9e5e5667f86c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3360220132829302916}
   - component: {fileID: 4809411056178865519}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Death particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4906,7 +4906,7 @@ GameObject:
   - component: {fileID: 508270079804833623}
   - component: {fileID: 8274291275168230369}
   m_Layer: 0
-  m_Name: Particle System (1)
+  m_Name: Death particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9800,7 +9800,7 @@ GameObject:
   - component: {fileID: 8970475904581927310}
   - component: {fileID: 1465344420217346623}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Death particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9829,7 +9829,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5330875720124901288}
   serializedVersion: 8
-  lengthInSec: 10
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -10658,7 +10658,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 10
       maxCurve:
         serializedVersion: 2

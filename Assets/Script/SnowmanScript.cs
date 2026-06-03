@@ -11,7 +11,8 @@ public class SnowmanScript : EnemyScript
     protected override void Start()
     {
         base.Start();
-        setSpeedAndRange(2, 4f);
+        float range = UnityEngine.Random.Range(3, 5);
+        setSpeedAndRange(2, range);
         fov = 15f;
     }
 

@@ -11,20 +11,23 @@ public class KrampusScript : EnemyScript
     protected override void Start()
     {
         base.Start();
-        setSpeedAndRange(velocity, 7f);
+        float range = UnityEngine.Random.Range(8, 10);
+        setSpeedAndRange(velocity, range);
+        fov = 180;
     }
 
     protected override IEnumerator AttackCrt()
     {
+        animator.SetBool("isAttacking", true);
         yield return new WaitForSeconds(chargeUp);
         foreach(Transform trans in spawnLocations)
         {
-            Instantiate(iceMemphit, transform.position, Quaternion.identity);
+            Instantiate(iceMemphit, trans.position, Quaternion.Euler(0,0, 90));
         }
         yield return new WaitForSeconds(attackDur);
         isAttacking = false;
         shouldRotate = true;
-        animator.SetBool("isIdling", true);
+        animator.SetBool("isAttacking", false);
         yield return new WaitForSeconds(cooldown);
         canAttack = true;
     }

@@ -14,7 +14,10 @@ public class EnemyScript : MonoBehaviour
     protected float distance;
     protected bool canAttack = true, isAttacking, shouldRotate = true, awake;
     public GameObject deathParticles;
-
+    public SpriteRenderer spriteRenderer;
+    public int RangeMinus, RangeMaximum;
+    public bool shouldRandomize;
+    public GameObject Krampus;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,15 +26,16 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void Start()
     {
+        if(shouldRandomize) spriteRenderer.sortingOrder = UnityEngine.Random.Range(RangeMinus, RangeMaximum);
         player = PlayerMovement.instance.gameObject.transform;
-       // EnemyManager.instance.Enemies.Add(gameObject);
+        EnemyManager.instance.Enemies.Add(gameObject);
         snapAtTarget(player);
         StartCoroutine(wakeUp());
     }
 
     private void OnDestroy()
     {
-       // EnemyManager.instance.Enemies.Remove(gameObject);
+         EnemyManager.instance.Enemies.Remove(gameObject);
     }
 
     protected virtual void FixedUpdate()
@@ -104,7 +108,11 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("puck")) death();
+        if (collision.gameObject.tag.Equals("puck"))
+        {
+            print("came in puck");
+            death();
+        }
     }
 
     protected void lookAt(float targetAngle)
@@ -153,6 +161,7 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void death()
     {
+        print("came in death");
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
         EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
@@ -160,6 +169,7 @@ public class EnemyScript : MonoBehaviour
 
     public void damage(int damage)
     {
+       // Time.timeScale = 0;
         death();
     }
 

@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class IceMemphitScript : EnemyScript
 {
-    bool StopFollow, Stop;
+    bool StopFollow, Stop, shouldStart = true;
     public float velocity = 3.5f;
 
     protected override void Start()
     {
         base.Start();
+        velocity = UnityEngine.Random.Range(4, 6);
         setSpeedAndRange(velocity, 1000000000000000000f);
+        shouldStart = false;
+        shouldRotate = false;
+        StartCoroutine(begineer());
     }
 
     public override void Movement()
     {
-        if (distance <= 0.5f)
+        if (shouldRotate && !StopFollow) lookAt(angleToTarget);
+
+        if (!shouldStart) return;
+        if (distance <= 2f)
         {
             StopFollow = true;
             if (!Stop) StartCoroutine(StopTimer());
@@ -37,7 +44,7 @@ public class IceMemphitScript : EnemyScript
     private IEnumerator StopTimer()
     {
         speed = 0f;
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.3f);
         speed = 20f;
         Stop = true;
     }
@@ -46,5 +53,14 @@ public class IceMemphitScript : EnemyScript
     {
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
+    }
+
+    private IEnumerator begineer()
+    {
+        yield return new WaitForSeconds(0.9f);
+        snapAtTarget(player);
+        animator.SetBool("begin", true);
+        shouldStart = true;
+        shouldRotate = true;
     }
 }

@@ -59,7 +59,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 640
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -77,6 +77,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   deathParticles: {fileID: 8023007042503218261, guid: 47ea54390c76ab24ebec9058674ce4ca, type: 3}
+  spriteRenderer: {fileID: 1444888801042938044}
+  RangeMinus: 40
+  RangeMaximum: 60
+  shouldRandomize: 1
   projectileSpawnLocation: {fileID: 1615431035087512883}
   projectile: {fileID: 3302735451581132710, guid: 152f28758da1d4b448c43f7aacdeb021, type: 3}
   projectileSpeed: 14
@@ -250,7 +254,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: -716482914163385135, guid: 2b85f9264cd22ec41b351c3dff0e9e8a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -39,6 +39,7 @@ public class PuckScript : MonoBehaviour
     protected virtual void Awake()
     {
         instance = this;
+        gameObject.name = "puck";
 
         returnMode = false;
         collectable = false;
