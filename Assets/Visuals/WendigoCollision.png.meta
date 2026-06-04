@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: f9819f51b7cb558479a41a99c48e886f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2489198334964524112
+    second: WendigoCollision_0
+  - first:
+      213: 5787590512725988377
+    second: WendigoCollision_1
+  - first:
+      213: -4319967895797419882
+    second: WendigoCollision_2
+  - first:
+      213: 5874267503907280535
+    second: WendigoCollision_3
+  - first:
+      213: 2176422474387783758
+    second: WendigoCollision_4
+  - first:
+      213: -3361875809800369620
+    second: WendigoCollision_5
+  - first:
+      213: -7520359741164958577
+    second: WendigoCollision_6
+  - first:
+      213: -8224038763537793515
+    second: WendigoCollision_7
+  - first:
+      213: -930825799501549634
+    second: WendigoCollision_8
+  - first:
+      213: -7190852360453198403
+    second: WendigoCollision_9
+  - first:
+      213: -7143644604493841506
+    second: WendigoCollision_10
+  - first:
+      213: 3854621283564509807
+    second: WendigoCollision_11
+  - first:
+      213: 3188504762428012682
+    second: WendigoCollision_12
+  - first:
+      213: 1929717138413480789
+    second: WendigoCollision_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WendigoCollision_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 738
+        width: 66
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb12fc7d47947dd0800000000000000
+      internalID: -2489198334964524112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 656
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.4848485, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914147848e6a15050800000000000000
+      internalID: 5787590512725988377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69037e146146c04c0800000000000000
+      internalID: -4319967895797419882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 492
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 796930eeb27958150800000000000000
+      internalID: 5874267503907280535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e408f0395b4343e10800000000000000
+      internalID: 2176422474387783758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 328
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2aced153c73851d0800000000000000
+      internalID: -3361875809800369620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cc6b4f8a052a790800000000000000
+      internalID: -7520359741164958577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51e794041585edd80800000000000000
+      internalID: -8224038763537793515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 82
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.469697, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebfe0f8fdda0513f0800000000000000
+      internalID: -930825799501549634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoCollision_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 66
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd68ee70e5f43c90800000000000000
+      internalID: -7190852360453198403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bf8648bd26ae56145a5089a9561567e9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":10.0},"gridSpriteSize":{"x":66.0,"y":82.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      WendigoCollision_0: -2489198334964524112
+      WendigoCollision_1: 5787590512725988377
+      WendigoCollision_2: -4319967895797419882
+      WendigoCollision_3: 5874267503907280535
+      WendigoCollision_4: 2176422474387783758
+      WendigoCollision_5: -3361875809800369620
+      WendigoCollision_6: -7520359741164958577
+      WendigoCollision_7: -8224038763537793515
+      WendigoCollision_8: -930825799501549634
+      WendigoCollision_9: -7190852360453198403
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,31 +1,16 @@
 fileFormatVersion: 2
-guid: 1e63cefc3f01af745a361376a4300d6a
+guid: 5e4daac7d62808a45b10a6ba7faf19ea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1844018131749625580
-    second: WendigoDashRun_0
+      213: 8960216437709561130
+    second: WendigoPipeDown_0
   - first:
-      213: -4972479080236398687
-    second: WendigoDashRun_1
+      213: 8917001687938575698
+    second: WendigoPipeDown_1
   - first:
-      213: 4806109708408087035
-    second: WendigoDashRun_2
-  - first:
-      213: 7577971822514043587
-    second: WendigoDashRun_3
-  - first:
-      213: -8999266753554847041
-    second: WendigoDashRun_4
-  - first:
-      213: -1564093234559278371
-    second: WendigoDashRun_5
-  - first:
-      213: -6783903845382243673
-    second: WendigoDashRun_6
-  - first:
-      213: 8976129881013864305
-    second: WendigoDashRun_7
+      213: 6178784272092401020
+    second: WendigoPipeDown_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -93,7 +78,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -121,51 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WendigoDashRun_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 328
-        width: 66
-        height: 82
-      alignment: 9
-      pivot: {x: 0.469697, y: 0.49999997}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4112fa9774bb866e0800000000000000
-      internalID: -1844018131749625580
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WendigoDashRun_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 246
-        width: 66
-        height: 82
-      alignment: 9
-      pivot: {x: 0.469697, y: 0.49999997}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1a7c2713f943efab0800000000000000
-      internalID: -4972479080236398687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WendigoDashRun_2
+      name: WendigoPipeDown_0
       rect:
         serializedVersion: 2
         x: 0
@@ -180,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf16831e05bb2b240800000000000000
-      internalID: 4806109708408087035
+      spriteID: a2d5b487065195c70800000000000000
+      internalID: 8960216437709561130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WendigoDashRun_3
+      name: WendigoPipeDown_1
       rect:
         serializedVersion: 2
         x: 0
@@ -202,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3ca7ed6093d5a2960800000000000000
-      internalID: 7577971822514043587
+      spriteID: 25d23277acd8fbb70800000000000000
+      internalID: 8917001687938575698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WendigoDashRun_4
+      name: WendigoPipeDown_2
       rect:
         serializedVersion: 2
         x: 0
@@ -224,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fba616b519e2c1380800000000000000
-      internalID: -8999266753554847041
+      spriteID: c7d86d11f837fb550800000000000000
+      internalID: 6178784272092401020
       vertices: []
       indices: 
       edges: []
@@ -234,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dcc78b4720ece88498f41e13e94c0d42
+    spriteID: 125900e82e0a70f48bce99c5fb511c74
     internalID: 0
     vertices: []
     indices: 
@@ -244,13 +185,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":5.0},"gridSpriteSize":{"x":66.0,"y":82.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":3.0},"gridSpriteSize":{"x":66.0,"y":82.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      WendigoDashRun_0: -1844018131749625580
-      WendigoDashRun_1: -4972479080236398687
-      WendigoDashRun_2: 4806109708408087035
-      WendigoDashRun_3: 7577971822514043587
-      WendigoDashRun_4: -8999266753554847041
+      WendigoPipeDown_0: 8960216437709561130
+      WendigoPipeDown_1: 8917001687938575698
+      WendigoPipeDown_2: 6178784272092401020
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

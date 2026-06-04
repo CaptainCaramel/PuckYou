@@ -47,6 +47,8 @@ public class EnemyManager : MonoBehaviour
 
         waitTime = 2f;
         spawnAmount = 1f;
+
+        recordedKillCount = killCount;
     }
 
     private void Start()
@@ -92,8 +94,7 @@ public class EnemyManager : MonoBehaviour
             WendigoAttack();
             return;
         }
-        killCount++;
-        //killCount = 170;
+        killCount++;    
         rotation += 0.8f;
         intensity -= 0.0009f;
         strength += 0.0028f;
@@ -109,6 +110,9 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator spawning()
     {
+        //yield return new WaitForSeconds(2f);
+        //killCount = 170;
+        //incrimentDeath();
         while(true && !EnemyManager.instance.bossFightStarted)
         {
             yield return new WaitForSeconds(waitTime);
@@ -140,11 +144,11 @@ public class EnemyManager : MonoBehaviour
 
     IEnumerator levanisDabadebisdgisCountdown()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(6f);
         levanisDabadebisdge.SetActive(true);
         yield return new WaitForSeconds(2f);
         wendigo.SetActive(true);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3.2f);
         levanisDabadebisdge.SetActive(false);
     }
 }

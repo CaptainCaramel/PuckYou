@@ -358,7 +358,7 @@ public class PlayerMovement : MonoBehaviour
             else if (tag.Equals("threeHit")) damageDeal = 15;
             else if (tag.Equals("fourHit")) damageDeal = 18;
             StartCoroutine(damage(damageDeal));
-            if (collision.gameObject.name != "bite" && collision.gameObject.name != "Punch") Destroy(collision.gameObject);
+            if (collision.gameObject.name != "bite" && collision.gameObject.name != "Punch" && !collision.gameObject.name.Contains("Wendy")) Destroy(collision.gameObject);
         }
 
         if (tag.Equals("campfire"))

@@ -1,0 +1,1004 @@
+fileFormatVersion: 2
+guid: 854319bfa51ca7b42ac963531c4eb482
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6272140908931442449
+    second: WendigoAOE_0
+  - first:
+      213: -2866439942720531805
+    second: WendigoAOE_1
+  - first:
+      213: 2866568938528210297
+    second: WendigoAOE_2
+  - first:
+      213: 1908383218478110459
+    second: WendigoAOE_3
+  - first:
+      213: -5936251814574646077
+    second: WendigoAOE_4
+  - first:
+      213: -4984455410272365697
+    second: WendigoAOE_5
+  - first:
+      213: 9050201654442367853
+    second: WendigoAOE_6
+  - first:
+      213: 3846929358541354436
+    second: WendigoAOE_7
+  - first:
+      213: 4811167295000291670
+    second: WendigoAOE_8
+  - first:
+      213: 1875765284163163736
+    second: WendigoAOE_9
+  - first:
+      213: -8353009005068085237
+    second: WendigoAOE_10
+  - first:
+      213: 6639243488220482025
+    second: WendigoAOE_11
+  - first:
+      213: 5308484271394303519
+    second: WendigoAOE_12
+  - first:
+      213: 3619348461943429977
+    second: WendigoAOE_13
+  - first:
+      213: 2773034194052258700
+    second: WendigoAOE_14
+  - first:
+      213: 439659729553706364
+    second: WendigoAOE_15
+  - first:
+      213: 671067712723266469
+    second: WendigoAOE_16
+  - first:
+      213: -8243392306448095329
+    second: WendigoAOE_17
+  - first:
+      213: 4599882919992986074
+    second: WendigoAOE_18
+  - first:
+      213: 5579565376236292112
+    second: WendigoAOE_19
+  - first:
+      213: -3501702139624882702
+    second: WendigoAOE_20
+  - first:
+      213: 7514162084027004427
+    second: WendigoAOE_21
+  - first:
+      213: -9203653938282998478
+    second: WendigoAOE_22
+  - first:
+      213: 421482765913969688
+    second: WendigoAOE_23
+  - first:
+      213: -6091864343310367299
+    second: WendigoAOE_24
+  - first:
+      213: 8305975506427051203
+    second: WendigoAOE_25
+  - first:
+      213: -5659826108501415067
+    second: WendigoAOE_26
+  - first:
+      213: -6031797206022349334
+    second: WendigoAOE_27
+  - first:
+      213: 708759458317419003
+    second: WendigoAOE_28
+  - first:
+      213: 772420669927056925
+    second: WendigoAOE_29
+  - first:
+      213: 9187735628283575307
+    second: WendigoAOE_30
+  - first:
+      213: -5045779127168438174
+    second: WendigoAOE_31
+  - first:
+      213: -6675947479182966479
+    second: WendigoAOE_32
+  - first:
+      213: 3423099899331652451
+    second: WendigoAOE_33
+  - first:
+      213: -3692517090750568115
+    second: WendigoAOE_34
+  - first:
+      213: 9005714223570796077
+    second: WendigoAOE_35
+  - first:
+      213: 3585501874621067391
+    second: WendigoAOE_36
+  - first:
+      213: 5949744795370327361
+    second: WendigoAOE_37
+  - first:
+      213: -4925009427249333685
+    second: WendigoAOE_38
+  - first:
+      213: -2185550321609490139
+    second: WendigoAOE_39
+  - first:
+      213: 4000875604625586056
+    second: WendigoAOE_40
+  - first:
+      213: 60016942449136982
+    second: WendigoAOE_41
+  - first:
+      213: -7227209165510729285
+    second: WendigoAOE_42
+  - first:
+      213: -1170211453772603894
+    second: WendigoAOE_43
+  - first:
+      213: -4505779648371589317
+    second: WendigoAOE_44
+  - first:
+      213: 2580066364701738077
+    second: WendigoAOE_45
+  - first:
+      213: 2943369267330346970
+    second: WendigoAOE_46
+  - first:
+      213: -3749643610786272145
+    second: WendigoAOE_47
+  - first:
+      213: -8071596021032943855
+    second: WendigoAOE_48
+  - first:
+      213: 3763509621903298835
+    second: WendigoAOE_49
+  - first:
+      213: -5413987453490628373
+    second: WendigoAOE_50
+  - first:
+      213: 3201453948482193711
+    second: WendigoAOE_51
+  - first:
+      213: 7845629879928777383
+    second: WendigoAOE_52
+  - first:
+      213: 530479854888671280
+    second: WendigoAOE_53
+  - first:
+      213: -633725034623544760
+    second: WendigoAOE_54
+  - first:
+      213: 6807268873065437024
+    second: WendigoAOE_55
+  - first:
+      213: 2233168955209454735
+    second: WendigoAOE_56
+  - first:
+      213: 6876062260841186836
+    second: WendigoAOE_57
+  - first:
+      213: -488220236169311147
+    second: WendigoAOE_58
+  - first:
+      213: 6734381411392399984
+    second: WendigoAOE_59
+  - first:
+      213: -8421549547318040092
+    second: WendigoAOE_60
+  - first:
+      213: 2017419973643427203
+    second: WendigoAOE_61
+  - first:
+      213: 6527310288468017019
+    second: WendigoAOE_62
+  - first:
+      213: -1837192932537708479
+    second: WendigoAOE_63
+  - first:
+      213: -6451601161274572240
+    second: WendigoAOE_64
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WendigoAOE_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe812f51311e4f8a0800000000000000
+      internalID: -6272140908931442449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2d6242f0c5838d0800000000000000
+      internalID: -2866439942720531805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d7429034918c720800000000000000
+      internalID: 2866568938528210297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf654b81d60fb7a10800000000000000
+      internalID: 1908383218478110459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc920f1d623e9da0800000000000000
+      internalID: -5936251814574646077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 580
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138b21831248d8047907803f9c84a3b7
+      internalID: -4984455410272365697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a47b6dee3249a94398ab31fd8f0c80c
+      internalID: 9050201654442367853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_7
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84419b3a0e487b45b6d4984accdd7a4
+      internalID: 3846929358541354436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_8
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ef6a697147dac459b5c7870fedde16
+      internalID: 4811167295000291670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_9
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fe94fa3ea860142b85622cc0efa62e
+      internalID: 1875765284163163736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_10
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a7b0cacbbbc8c42b0a357b01928356
+      internalID: -8353009005068085237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_11
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 464
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3709c8a8e24854a8883063ba543f59
+      internalID: 6639243488220482025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dec758c35b7baca4580e96952485c6b3
+      internalID: 5308484271394303519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c37c14442c2e04a832275ca3996559
+      internalID: 3619348461943429977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_14
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1fa79a52cfc664ab4c39ccaf5df362
+      internalID: 2773034194052258700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_15
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321ec27c79b4c6b4fbbdb5f176688301
+      internalID: 439659729553706364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_16
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ed85857331b534b9649c987b7b99ba
+      internalID: 671067712723266469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_17
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 348
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511bbab7a2820a84f93f3c77024f0357
+      internalID: -8243392306448095329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb35db10b985f94689f00306f95cd0a
+      internalID: 4599882919992986074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_19
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7a4bf1af8adf84293447f3026adae6
+      internalID: 5579565376236292112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_20
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeaf0b648fb1e24fab82347f8b4e780
+      internalID: -3501702139624882702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_21
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9e847cd228b8645a409d61f5c0f98b
+      internalID: 7514162084027004427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_22
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2da5c9f6b950f4185305234d76811d
+      internalID: -9203653938282998478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_23
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 232
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbc83afc22df4041bf95a6455e08652
+      internalID: 421482765913969688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7361f1bfe2ba1845be06bde44787947
+      internalID: -6091864343310367299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_25
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b21eaf8059f26c4cba64465ad0bb97a
+      internalID: 8305975506427051203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_26
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26d981f7e6056b4c817e74ac30b0463
+      internalID: -5659826108501415067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_27
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126590a8c47b99948b8db7b6473795c5
+      internalID: -6031797206022349334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_28
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666f226f7c0d1a645ad3550ab0bc2cc0
+      internalID: 708759458317419003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WendigoAOE_29
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 116
+        width: 74
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b02748006319eba449741f38b12bc856
+      internalID: 772420669927056925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a95100cfb096dcd47b60342f62741c22
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":6.0},"gridSpriteSize":{"x":74.0,"y":116.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      WendigoAOE_0: -6272140908931442449
+      WendigoAOE_1: -2866439942720531805
+      WendigoAOE_10: -8353009005068085237
+      WendigoAOE_11: 6639243488220482025
+      WendigoAOE_12: 5308484271394303519
+      WendigoAOE_13: 3619348461943429977
+      WendigoAOE_14: 2773034194052258700
+      WendigoAOE_15: 439659729553706364
+      WendigoAOE_16: 671067712723266469
+      WendigoAOE_17: -8243392306448095329
+      WendigoAOE_18: 4599882919992986074
+      WendigoAOE_19: 5579565376236292112
+      WendigoAOE_2: 2866568938528210297
+      WendigoAOE_20: -3501702139624882702
+      WendigoAOE_21: 7514162084027004427
+      WendigoAOE_22: -9203653938282998478
+      WendigoAOE_23: 421482765913969688
+      WendigoAOE_24: -6091864343310367299
+      WendigoAOE_25: 8305975506427051203
+      WendigoAOE_26: -5659826108501415067
+      WendigoAOE_27: -6031797206022349334
+      WendigoAOE_28: 708759458317419003
+      WendigoAOE_29: 772420669927056925
+      WendigoAOE_3: 1908383218478110459
+      WendigoAOE_4: -5936251814574646077
+      WendigoAOE_5: -4984455410272365697
+      WendigoAOE_6: 9050201654442367853
+      WendigoAOE_7: 3846929358541354436
+      WendigoAOE_8: 4811167295000291670
+      WendigoAOE_9: 1875765284163163736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
