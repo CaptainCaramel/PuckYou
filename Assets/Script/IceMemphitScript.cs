@@ -22,7 +22,7 @@ public class IceMemphitScript : EnemyScript
         if (shouldRotate && !StopFollow) lookAt(angleToTarget);
 
         if (!shouldStart) return;
-        if (distance <= 2f)
+        if (distance <= 3f)
         {
             StopFollow = true;
             if (!Stop) StartCoroutine(StopTimer());
@@ -61,5 +61,14 @@ public class IceMemphitScript : EnemyScript
         animator.SetBool("begin", true);
         shouldStart = true;
         shouldRotate = true;
+    }
+
+    protected override void OnTriggerEnter2D(Collider2D collision)
+    {
+        base.OnTriggerEnter2D(collision);
+        if (collision.gameObject.layer == 10)
+        {
+            death();
+        }
     }
 }

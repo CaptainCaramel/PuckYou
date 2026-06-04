@@ -41,6 +41,7 @@ public class WendigoScript : EnemyScript
         }
         else
         {
+            animator.SetBool("isWalking", true);
             rb.linearVelocity = direction * (speed);
         }
     }
@@ -81,6 +82,8 @@ public class WendigoScript : EnemyScript
         if (!canAttack) return;
 
         halt();
+
+        animator.SetBool("isWalking", false);
 
         isAttacking = true;
         canAttack = false;

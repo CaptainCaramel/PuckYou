@@ -5,7 +5,6 @@ using UnityEngine.Rendering.Universal;
 
 public class PuckScript : MonoBehaviour
 {
-
     protected Rigidbody2D rb;
 
     [SerializeField] protected float speed = 10f;
@@ -51,7 +50,7 @@ public class PuckScript : MonoBehaviour
         trailParticle = transform.GetChild(0).GetComponent<ParticleSystem>();
 
 
-        
+
 
         currReturnSpeed = returnSpeed;
 
@@ -112,21 +111,21 @@ public class PuckScript : MonoBehaviour
 
             currReturnSpeed = Mathf.Clamp(currReturnSpeed, 3, 24);
 
-            rb.linearVelocity = transform.right * currReturnSpeed;         
+            rb.linearVelocity = transform.right * currReturnSpeed;
         }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        print("collided");
+
         if (collision.gameObject.layer == 8) return;
         EnemyScript enemyScript = collision.transform.root.GetComponent<EnemyScript>();
 
         if (enemyScript != null)
         {
             enemyScript.damage(damage);
-            currReturnSpeed += returnSpeedIncrement;
-            returnObj = PlayerMovement.instance.gameObject;
-            returnMode = true;
+            backtothefuture();
         }
         camShakerScript.StartShake(hitShake);
     }
@@ -139,5 +138,20 @@ public class PuckScript : MonoBehaviour
             returnPuck(pm);
             return;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            backtothefuture();
+        }
+    }
+
+    void backtothefuture()
+    {
+        currReturnSpeed += returnSpeedIncrement;
+        returnObj = PlayerMovement.instance.gameObject;
+        returnMode = true;
     }
 }

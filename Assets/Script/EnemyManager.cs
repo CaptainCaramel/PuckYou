@@ -31,7 +31,14 @@ public class EnemyManager : MonoBehaviour
     public Light2D[] globalLights;
     private FieldInfo fallOfFields = typeof(Light2D).GetField("m_FalloffIntensity", BindingFlags.NonPublic | BindingFlags.Instance);
 
+    public bool bossFightStarted = false;
+
     public int limit = 15;
+
+    public event Action bossfightStartedEv;
+
+    public GameObject levanisDabadebisdge;
+    public GameObject wendigo;
 
     private void Awake()
     {
@@ -78,14 +85,24 @@ public class EnemyManager : MonoBehaviour
 
     public void incrimentDeath()
     {
+        if (bossFightStarted) return;
+        if(killCount >= 170 && !bossFightStarted)
+        {
+            bossFightStarted = true;
+            WendigoAttack();
+            return;
+        }
         killCount++;
-        rotation += 0.55f;
-        intensity -= 0.0005f;
-        strength += 0.001f;
+        killCount = 170;
+        rotation += 0.8f;
+        intensity -= 0.0009f;
+        strength += 0.0028f;
+        rotation = Mathf.Clamp(rotation, 0, 133.5f);
         clock.transform.rotation = Quaternion.Euler(0,0,rotation);
         if (globalLights[0].intensity <= 0.1f) return;
         for(int i = 0; i < globalLights.Length; i++)
         {
+            print("KILL COUNT: " + killCount);
             globalLights[i].intensity = intensity;
             fallOfFields.SetValue(globalLights[i], strength);
         }
@@ -93,12 +110,13 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator spawning()
     {
-        while(true)
+        while(true && !EnemyManager.instance.bossFightStarted)
         {
             yield return new WaitForSeconds(waitTime);
             if (EnemyManager.instance.Enemies.Count >= 15) continue;
             for(int i = 0; i <= spawnAmount; i++)
             {
+                if (EnemyManager.instance.bossFightStarted) break;
                 int toSpawn = UnityEngine.Random.Range(0, EnemiesToSpawn.Count - 1);
                 float randomX = UnityEngine.Random.Range(minBoundaryX, maxBoundaryX);
                 float randomY = UnityEngine.Random.Range(minBoundaryY, maxBoundaryY);
@@ -111,7 +129,23 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(spawningParticle, new Vector2(randomX, randomY), Quaternion.identity);
                 yield return new WaitForSeconds(0.12f);
                 Instantiate(spawned, new Vector2(randomX, randomY), Quaternion.identity);
-            }
+            }        
         }
+    }
+
+    public void WendigoAttack()
+    {
+        StartCoroutine(levanisDabadebisdgisCountdown());
+        bossfightStartedEv?.Invoke();
+    }
+
+    IEnumerator levanisDabadebisdgisCountdown()
+    {
+        yield return new WaitForSeconds(3f);
+        levanisDabadebisdge.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        wendigo.SetActive(true);
+        yield return new WaitForSeconds(4f);
+        levanisDabadebisdge.SetActive(false);
     }
 }

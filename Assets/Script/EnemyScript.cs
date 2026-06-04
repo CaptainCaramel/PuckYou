@@ -28,9 +28,10 @@ public class EnemyScript : MonoBehaviour
     {
         if(shouldRandomize) spriteRenderer.sortingOrder = UnityEngine.Random.Range(RangeMinus, RangeMaximum);
         player = PlayerMovement.instance.gameObject.transform;
-        EnemyManager.instance.Enemies.Add(gameObject);
+        //EnemyManager.instance.Enemies.Add(gameObject);
         snapAtTarget(player);
         StartCoroutine(wakeUp());
+        SetupSubscriptionToCaptainCaramel();
     }
 
     private void OnDestroy()
@@ -162,7 +163,7 @@ public class EnemyScript : MonoBehaviour
     protected virtual void death()
     {
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
-        EnemyManager.instance.incrimentDeath();
+        if(!EnemyManager.instance.bossFightStarted) EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
     }
 
@@ -175,5 +176,10 @@ public class EnemyScript : MonoBehaviour
     public void halt()
     {
         rb.linearVelocity = Vector2.zero;
+    }
+
+    private void SetupSubscriptionToCaptainCaramel()
+    {
+        if(EnemyManager.instance != null) EnemyManager.instance.bossfightStartedEv += death;
     }
 }
