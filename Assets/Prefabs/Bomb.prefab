@@ -232,7 +232,7 @@ MonoBehaviour:
   driftForce: 10
   rotationForce: 5
   explosionRadius: 5
-  damage: 2
+  damage: 3
   explodeParticles: {fileID: 5019521204312107564, guid: 60484d1840ac8084cadc84613d33c241, type: 3}
   driftParticles: {fileID: 7613800931355394793}
   explosionLayer:
@@ -264,7 +264,6 @@ MonoBehaviour:
   amplitude: 0
   frequency: 0
   time: 0
-  singleton: 0
 --- !u!58 &8862987103758133278
 CircleCollider2D:
   m_ObjectHideFlags: 0

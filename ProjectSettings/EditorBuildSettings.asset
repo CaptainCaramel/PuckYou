@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Loading.unity
     guid: e6bbfc5ec5134054c8d2d6630e4f5455
   - enabled: 1
+    path: Assets/Scenes/CharacterChooser.unity
+    guid: 28759165213ef7e468bb541d4a72501f
+  - enabled: 1
+    path: Assets/Scenes/LashaScene.unity
+    guid: c9f9040da09fc8f4bac58c136106c1a6
+  - enabled: 0
     path: Assets/Scenes/LashaiasScene.unity
     guid: d15fff9dd8772124eb910f99346a99a7
   - enabled: 0

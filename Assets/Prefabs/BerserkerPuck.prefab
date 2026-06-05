@@ -4941,6 +4941,7 @@ GameObject:
   - component: {fileID: 8975284159752795735}
   - component: {fileID: 8862987103758133278}
   - component: {fileID: 7021758357019814939}
+  - component: {fileID: 8320348525331579926}
   m_Layer: 6
   m_Name: BerserkerPuck
   m_TagString: puck
@@ -4978,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 575
-  returnSpeed: 4
+  returnSpeed: 6
   returnSpeedIncrement: 3.5
   damage: 1
   sendOnAwake: 1
@@ -5027,6 +5028,7 @@ MonoBehaviour:
   amplitude: 0
   frequency: 0
   time: 0
+  singleton: 0
 --- !u!58 &8862987103758133278
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5043,7 +5045,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -5061,8 +5063,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.8
+  m_Offset: {x: 0.006598264, y: 0}
+  m_Radius: 0.19295743
 --- !u!96 &7021758357019814939
 TrailRenderer:
   serializedVersion: 4
@@ -5182,3 +5184,39 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!58 &8320348525331579926
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745641984099150858}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1023
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.003299147, y: 0}
+  m_Radius: 0.19647872

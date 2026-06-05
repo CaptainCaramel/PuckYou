@@ -23,6 +23,9 @@ public class WendigoScript : EnemyScript
     public GameObject ender;
     public GameObject wall;
     new public spriteFlashScript spriteFlash;
+    public Animator endingAnimator;
+    public Animator chucker;
+    bool first;
 
     protected override void Start()
     {
@@ -34,14 +37,15 @@ public class WendigoScript : EnemyScript
         snapAtTarget(wall.transform);
         spriteFlash = GetComponent<spriteFlashScript>();
         hp = 100;
+        first = true;
     }
 
     public override void Movement()
     {
-        handleHP();
-
         if (!start) return;
 
+        handleHP();
+        print("aq var");
         bool isInRange = distance <= attackDistance;
         if (shouldRotate || isAttacking && isInRange && !isCharging) lookAt(angleToTarget);
 
@@ -104,6 +108,11 @@ public class WendigoScript : EnemyScript
     bool checkForCharge()
     {
         StartCoroutine(disableChecking());
+        if (first)
+        {
+            first = false;
+            return true;
+        } 
         if (canCharge)
         {
             return (Random.Range(0, 6) == 0) ? true : false;
@@ -201,7 +210,7 @@ public class WendigoScript : EnemyScript
     public IEnumerator starter()
     {
         start = false;
-        yield return new WaitForSeconds(3f);
+        yield return null;
         start = true;
     }
 
@@ -216,12 +225,14 @@ public class WendigoScript : EnemyScript
     public override void damage(int damage)
     {
         spriteFlash.callFlash();
-        hp--;
+        hp-=damage;
         if(hp <= 0)
         {
             start = false;
             Instantiate(deathParticles, wendysFuneralLocation.position, Quaternion.identity);
-            ender.SetActive(true);
+            endingAnimator.SetBool("end", true);
+            chucker.SetBool("chuck", true);
+            Destroy(hpslider);
             Destroy(gameObject);
         }
     }

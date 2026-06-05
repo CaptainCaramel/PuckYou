@@ -4980,7 +4980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 575
-  returnSpeed: 4
+  returnSpeed: 6
   returnSpeedIncrement: 3.5
   damage: 1
   sendOnAwake: 1
@@ -5046,7 +5046,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5066,6 +5066,7 @@ MonoBehaviour:
   amplitude: 0
   frequency: 0
   time: 0
+  singleton: 0
 --- !u!96 &7021758357019814939
 TrailRenderer:
   serializedVersion: 4

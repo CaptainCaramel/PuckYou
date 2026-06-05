@@ -72,10 +72,9 @@ public class WhiteDeathMovement : PlayerMovement
         attackAvailable = false;
         isAttacking = true;
 
-        CameraManager.instance.resetZoom(zoomOutCamSpeed / 2, true);
+        
 
         shakeSelfScript.stopShake();
-        print("YLEE");
         GameObject puck = Instantiate(fullChargedPuck, puckTransform.position, puckTransform.rotation);
         puck.GetComponent<PuckScript>().returnObj = gameObject;
         WhiteDeathPuckMovement t = puck.GetComponent<WhiteDeathPuckMovement>();
@@ -193,14 +192,15 @@ public class WhiteDeathMovement : PlayerMovement
 
     private void Attack_StartQ(InputAction.CallbackContext callbackContext)
     {
-        if (!CanQ()) return;
+        print(CanQ());
+        if (!CanQ()) { return; }
 
         shootSlider.gameObject.SetActive(true);
         isChargingQ = true;
     }
     protected void Attack_FullQ(InputAction.CallbackContext callbackContext)
     {
-        if (!CanQ()) return;
+        if (!CanQ() ||  !isChargingQ) return;
 
         CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed, true);
 
@@ -210,7 +210,9 @@ public class WhiteDeathMovement : PlayerMovement
 
     protected void Attack_ReleaseQ(InputAction.CallbackContext callbackContext)
     {
-        if (!CanQ()) return;
+        if (!CanQ() || !isChargingQ) return;
+
+        CameraManager.instance.resetZoom(zoomOutCamSpeed / 2, true);
 
         if (isQMaxxed) StartCoroutine(superQ());
         else StartCoroutine(normalQ());

@@ -25,11 +25,12 @@ public class CameraManager : MonoBehaviour
         _duration = speed;
 
         _larpAmount = cm_Main.Lens.OrthographicSize;
-        DOTween.To(GetLerpValue, SetLerpValue, orthSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete).SetUpdate(unscaledTime);
+        DOTween.To(GetLerpValue, SetLerpValue, orthSize, _duration).SetEase(Ease.InOutCubic).OnUpdate(OnLerpUpdate).OnComplete(OnLerpComplete).SetUpdate(unscaledTime).SetId("CamTween");
     }
 
     public void resetZoom(float speed, bool unscaledTime)
     {
+        DOTween.Kill("CamTween");
 
         _duration = speed;
 

@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c2255530b332c804bb92f2fbd8d8a8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 162863931169946305}
   - component: {fileID: 6361415762515808383}
   - component: {fileID: 3184896093258002783}
+  - component: {fileID: 2191119707720169960}
   m_Layer: 7
   m_Name: DefaultWolf
   m_TagString: Untagged
@@ -183,7 +184,7 @@ MonoBehaviour:
   isGolem: 0
   sparks: {fileID: 0}
   slowerRenderer: {fileID: 0}
-  selfRenderer: {fileID: 0}
+  selfRenderer: {fileID: 4193703439762590511}
 --- !u!95 &6361415762515808383
 Animator:
   serializedVersion: 7
@@ -252,6 +253,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.89324903, y: 0.6788299}
   m_EdgeRadius: 0
+--- !u!114 &2191119707720169960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5741326252340796084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd8bf8a548841542ac67bac22dcde2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spriteFlashScript
+  _duration: 0.5
 --- !u!1 &6502455867398168881
 GameObject:
   m_ObjectHideFlags: 0

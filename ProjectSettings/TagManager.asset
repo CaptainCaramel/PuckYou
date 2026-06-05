@@ -47,8 +47,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Big J
+    uniqueID: 3538802573
+    locked: 0
+  - name: Camp
+    uniqueID: 2806982041
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: OneAboveAll
+    uniqueID: 1621640573
     locked: 0
   m_RenderingLayers:
   - Default

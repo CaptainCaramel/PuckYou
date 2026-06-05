@@ -20,6 +20,7 @@ public class EnemyScript : MonoBehaviour
     public GameObject Krampus;
     public spriteFlashScript spriteFlash;
     public int hp;
+    bool isDead;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class EnemyScript : MonoBehaviour
         snapAtTarget(player);
         StartCoroutine(wakeUp());
         SetupSubscriptionToCaptainCaramel();
+        isDead = false;
     }
 
     private void OnDestroy()
@@ -113,11 +115,13 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.tag.Equals("puck"))
         {
-            print("came in puck");
-            death();
+            PuckScript puckscript = collision.gameObject.GetComponent<PuckScript>();
+            damage(puckscript.damage);
         }
+        */
     }
 
     protected void lookAt(float targetAngle)
@@ -166,6 +170,8 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void death()
     {
+        if (isDead) return;
+        isDead = true;
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
         if(!EnemyManager.instance.bossFightStarted) EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
@@ -173,8 +179,7 @@ public class EnemyScript : MonoBehaviour
 
     public virtual void damage(int damage)
     {
-        // Time.timeScale = 0;
-        hp--;
+        hp-= damage;
         if (hp <= 0)
         {
             death();

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5975129503403809744}
   - component: {fileID: 7238797449126280847}
   - component: {fileID: 5680025128302316055}
-  - component: {fileID: 8123933077381078408}
+  - component: {fileID: 2463574872862648204}
   m_Layer: 7
   m_Name: Yeti
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MonoBehaviour:
   RangeMaximum: 60
   shouldRandomize: 1
   Krampus: {fileID: 0}
-  spriteFlash: {fileID: 0}
+  spriteFlash: {fileID: 2463574872862648204}
   hp: 2
   projectileSpawnLocation: {fileID: 1615431035087512883}
   projectile: {fileID: 3302735451581132710, guid: 152f28758da1d4b448c43f7aacdeb021, type: 3}
@@ -148,7 +148,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8123933077381078408
+--- !u!114 &2463574872862648204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,7 +250,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c2255530b332c804bb92f2fbd8d8a8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

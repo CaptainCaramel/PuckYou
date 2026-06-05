@@ -81,6 +81,8 @@ public class PlayerMovement : MonoBehaviour
 
     private audioManager audioMgr;
 
+    public GameObject deather;
+
     protected virtual void Awake()
     {
         hp = 100;
@@ -256,6 +258,11 @@ public class PlayerMovement : MonoBehaviour
     {
         invincible = true;
         hp -= damage;
+        if(hp <= 0)
+        {
+            deather.SetActive(true);
+            yield break;
+        }
         sFlash.callFlash();
         shakeCamScript.StartShake(damageShake);
         StartCoroutine(frameStop(0.2f));

@@ -357,7 +357,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c2255530b332c804bb92f2fbd8d8a8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -564,6 +564,37 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &5679358498940402402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8447657448391253141}
+  m_Layer: 7
+  m_Name: DeathPartLoc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8447657448391253141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5679358498940402402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6504001, y: 0.80050015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2992977930674851729}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6418750084775706311
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,7 +620,7 @@ Transform:
   m_GameObject: {fileID: 6418750084775706311}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.612, y: 0.79, z: 0}
+  m_LocalPosition: {x: 0.77, y: 0.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -610,13 +641,14 @@ GameObject:
   - component: {fileID: 1623764424768343103}
   - component: {fileID: 4422090424403491602}
   - component: {fileID: 2254234359674817494}
+  - component: {fileID: 2842160761081893067}
   m_Layer: 7
   m_Name: Wendy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2992977930674851729
 Transform:
   m_ObjectHideFlags: 0
@@ -625,7 +657,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7234738841014665607}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7083782, w: 0.70583314}
+  m_LocalRotation: {x: 0, y: 0, z: -0.70837677, w: 0.70583457}
   m_LocalPosition: {x: -10.68, y: 2.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -633,6 +665,7 @@ Transform:
   - {fileID: 9000778389137981297}
   - {fileID: 2342953051197595828}
   - {fileID: 2994115996425700503}
+  - {fileID: 8447657448391253141}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.206}
 --- !u!114 &6477673414206065060
@@ -647,12 +680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8e9913f8dcbc544bb9fc2b040f533f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WendigoScript
-  deathParticles: {fileID: 0}
+  deathParticles: {fileID: 7927003448140338019, guid: 7569f8f687da5de418a10ecca8186017, type: 3}
   spriteRenderer: {fileID: 0}
   RangeMinus: 0
   RangeMaximum: 0
   shouldRandomize: 0
   Krampus: {fileID: 0}
+  spriteFlash: {fileID: 2842160761081893067}
+  hp: 100
   chargeDistance: 20
   attackDistance: 6
   canCharge: 1
@@ -674,6 +709,10 @@ MonoBehaviour:
   alrHit: 0
   start: 0
   hpslider: {fileID: 0}
+  wendysFuneralLocation: {fileID: 8447657448391253141}
+  ender: {fileID: 0}
+  wall: {fileID: 0}
+  spriteFlash: {fileID: 2842160761081893067}
 --- !u!95 &602110709999009757
 Animator:
   serializedVersion: 7
@@ -831,3 +870,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.5740924, y: 2.710286}
   m_EdgeRadius: 0
+--- !u!114 &2842160761081893067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7234738841014665607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd8bf8a548841542ac67bac22dcde2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spriteFlashScript
+  _duration: 0.8

@@ -4979,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   speed: 575
-  returnSpeed: 4
+  returnSpeed: 6
   returnSpeedIncrement: 3.5
   damage: 1
   sendOnAwake: 1
@@ -5027,6 +5027,7 @@ MonoBehaviour:
   amplitude: 0
   frequency: 0
   time: 0
+  singleton: 0
 --- !u!58 &8862987103758133278
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5043,7 +5044,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

@@ -40,6 +40,8 @@ public class EnemyManager : MonoBehaviour
     public GameObject levanisDabadebisdge;
     public GameObject wendigo, wendigoCanvas;
 
+    public Animator chucker;
+
     private void Awake()
     {
         instance = this;
@@ -94,7 +96,7 @@ public class EnemyManager : MonoBehaviour
             WendigoAttack();
             return;
         }
-        killCount++;    
+        killCount++;   
         rotation += 0.8f;
         intensity -= 0.0009f;
         strength += 0.0028f;
@@ -129,8 +131,10 @@ public class EnemyManager : MonoBehaviour
                 {
                     print("hockey: " + spawned.name);
                 }
+                if (EnemyManager.instance.bossFightStarted) break;
                 Instantiate(spawningParticle, new Vector2(randomX, randomY), Quaternion.identity);
                 yield return new WaitForSeconds(0.12f);
+                if (EnemyManager.instance.bossFightStarted) break;
                 Instantiate(spawned, new Vector2(randomX, randomY), Quaternion.identity);
             }        
         }
@@ -144,12 +148,14 @@ public class EnemyManager : MonoBehaviour
 
     IEnumerator levanisDabadebisdgisCountdown()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
         levanisDabadebisdge.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        chucker.SetBool("chuck", true);
+        yield return new WaitForSeconds(5.2f);
         wendigo.SetActive(true);
         wendigoCanvas.SetActive(true);
-        yield return new WaitForSeconds(3.2f);
+        yield return new WaitForSeconds(0.05f);
+        chucker.SetBool("chuck", false);
         levanisDabadebisdge.SetActive(false);
     }
 }

@@ -238,7 +238,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c2255530b332c804bb92f2fbd8d8a8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -420,7 +420,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c2255530b332c804bb92f2fbd8d8a8f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5380,7 +5380,7 @@ GameObject:
   - component: {fileID: 2174782810657533785}
   - component: {fileID: 7780087576088617647}
   - component: {fileID: 4071397055875056304}
-  - component: {fileID: 704343863751775210}
+  - component: {fileID: 7131381267012075569}
   m_Layer: 7
   m_Name: IceGolem
   m_TagString: Untagged
@@ -5499,8 +5499,8 @@ MonoBehaviour:
   RangeMaximum: 40
   shouldRandomize: 1
   Krampus: {fileID: 0}
-  spriteFlash: {fileID: 0}
-  hp: 2
+  spriteFlash: {fileID: 7131381267012075569}
+  hp: 3
   attHitbox: {fileID: 7405372907868489356}
   cooldown: 0.4
   attackDur: 0.35
@@ -5532,7 +5532,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &704343863751775210
+--- !u!114 &7131381267012075569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
