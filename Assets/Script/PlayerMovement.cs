@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("HP")]
 
-    [SerializeField] private int hp = 100;
+    [SerializeField] protected int hp = 100;
     float hpCurVel = 0f;
     [SerializeField] private float invTime = 1f;
     protected bool invincible = false;
@@ -74,12 +74,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("Audio")]
 
     [SerializeField] private AudioClip[] attackSounds;
+    [SerializeField] private AudioClip damageSound;
 
 
     public enum PlayerClass {berserker = 0, theWhiteDeath = 1, frostbite = 2}
     public PlayerClass playerClass;
 
-    private audioManager audioMgr;
+    protected audioManager audioMgr;
 
     public GameObject deather;
 
@@ -270,6 +271,7 @@ public class PlayerMovement : MonoBehaviour
         }
         sFlash.callFlash();
         shakeCamScript.StartShake(damageShake);
+        audioMgr.playAudio(damageSound, 0.4f, 1, transform, audioMgr.sfx);
         StartCoroutine(frameStop(0.2f));
 
         yield return new WaitForSeconds(invTime);

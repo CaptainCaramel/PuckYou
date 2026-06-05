@@ -32,6 +32,10 @@ public class WhiteDeathMovement : PlayerMovement
     [SerializeField] private float knockbacktime = 0.25f;
     [SerializeField] private float knockbackForce = 200f;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip qSound;
+    [SerializeField] private AudioClip chargedQSound, eSound ,ultStartSound, ultSound, ultShotSound;
+
     protected override void Awake()
     {
         playerClass = PlayerClass.theWhiteDeath;
@@ -72,7 +76,7 @@ public class WhiteDeathMovement : PlayerMovement
         attackAvailable = false;
         isAttacking = true;
 
-        
+        audioMgr.playAudio(chargedQSound, 0.45f, 1, transform, audioMgr.sfx);
 
         shakeSelfScript.stopShake();
         GameObject puck = Instantiate(fullChargedPuck, puckTransform.position, puckTransform.rotation);
@@ -105,6 +109,8 @@ public class WhiteDeathMovement : PlayerMovement
         attackAvailable = false;
         isAttacking = true;
 
+        audioMgr.playAudio(qSound, 0.45f, 1, transform, audioMgr.sfx);
+
         GameObject puck = Instantiate(halfChargedPuck, puckTransform.position, puckTransform.rotation);
         puck.GetComponent<PuckScript>().returnObj = gameObject;
         WhiteDeathPuckMovement t = puck.GetComponent<WhiteDeathPuckMovement>();
@@ -135,6 +141,8 @@ public class WhiteDeathMovement : PlayerMovement
         if (!isAttacking) t = puckTransform;
         else t = PuckScript.instance.transform;
 
+        audioMgr.playAudio(eSound, 0.45f, 1, transform, audioMgr.sfx);
+
         Instantiate(bomb, t.position, t.rotation);
 
         AbilitySliderController.instance.resetSlider(1);
@@ -150,7 +158,7 @@ public class WhiteDeathMovement : PlayerMovement
 
         CameraManager.instance.changeZoom(zoomOutCamSize, zoomOutCamSpeed, true);
 
-
+        audioMgr.playAudio(ultSound, 0.45f, 1, transform, audioMgr.sfx);
 
         for (int i = 0; i < ultShotAmount; i++)
         {
@@ -159,6 +167,7 @@ public class WhiteDeathMovement : PlayerMovement
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
             worldPos.z = 0;
 
+            audioMgr.playAudio(ultShotSound, 0.45f, 1, transform, audioMgr.sfx);
             Instantiate(ultShot, worldPos, Quaternion.identity);     
         }
 

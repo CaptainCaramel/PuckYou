@@ -4,6 +4,8 @@ public class BerserkerPuckScript : PuckScript
 {
     [SerializeField] private bool spinMode = false;
 
+    [SerializeField] private AudioClip parrySound;
+
     protected override void Awake()
     {
         base.Awake();
@@ -12,6 +14,8 @@ public class BerserkerPuckScript : PuckScript
 
     private void puckParry()
     {
+        audioManager.instance.playAudio(parrySound, 0.5f, 1, transform, audioManager.instance.sfx);
+
         returnObj = FindClosestObject(EnemyManager.instance.Enemies.ToArray());
         returnMode = true;
         print(returnObj);

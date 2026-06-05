@@ -22,6 +22,9 @@ public class EnemyScript : MonoBehaviour
     public int hp;
     bool isDead;
 
+    protected AudioClip[] deathSound;
+    [SerializeField] protected AudioClip damageSound;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -172,6 +175,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
+        audioManager.instance.playRandomAudio(deathSound, 0.45f, 1, transform, audioManager.instance.sfx);
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
         if(!EnemyManager.instance.bossFightStarted) EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
@@ -179,7 +183,9 @@ public class EnemyScript : MonoBehaviour
 
     public virtual void damage(int damage)
     {
-        hp-= damage;
+        audioManager.instance.playAudio(damageSound, 0.45f, 1, transform, audioManager.instance.sfx);
+
+        hp -= damage;
         if (hp <= 0)
         {
             death();

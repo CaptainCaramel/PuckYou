@@ -40,6 +40,8 @@ public class EnemyManager : MonoBehaviour
     public GameObject levanisDabadebisdge;
     public GameObject wendigo, wendigoCanvas;
 
+    public AudioClip wendigoSpawnSound;
+
     public Animator chucker;
 
     private void Awake()
@@ -56,6 +58,7 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(spawning());
+
     }
 
     private void FixedUpdate()
@@ -151,10 +154,13 @@ public class EnemyManager : MonoBehaviour
         yield return new WaitForSeconds(4f);
         levanisDabadebisdge.SetActive(true);
         chucker.SetBool("chuck", true);
+        audioManager.instance.playAudio(wendigoSpawnSound, 0.5f, 1, transform, audioManager.instance.sfx);
+
         yield return new WaitForSeconds(5.2f);
         wendigo.SetActive(true);
         wendigoCanvas.SetActive(true);
         yield return new WaitForSeconds(0.05f);
+
         chucker.SetBool("chuck", false);
         levanisDabadebisdge.SetActive(false);
     }

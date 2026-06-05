@@ -3,6 +3,7 @@ using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using static UnityEngine.Rendering.DebugUI;
 
 public class WendigoScript : EnemyScript
 {
@@ -27,8 +28,17 @@ public class WendigoScript : EnemyScript
     public Animator chucker;
     bool first;
 
+    [SerializeField] private AudioClip slashDouble, slashLong, wallHit;
+    [SerializeField] private AudioClip[] sikdili;
+
+    private AudioSource currAttackSource;
+
+    [SerializeField] private GameObject hitbox, chargeHitbox;
+
     protected override void Start()
     {
+        deathSound = sikdili;
+
         base.Start();
         setSpeedAndRange(8, 0);
         rotationSpeed = 360;
@@ -62,12 +72,18 @@ public class WendigoScript : EnemyScript
         
         if(isInRange)
         {
+            hitbox.SetActive(false);
+
+            //if(currAttackSource != null && currAttackSource.isPlaying) currAttackSource.Stop();
             Attack();
         }
         else
         {
             animator.SetBool("isWalking", true);
             clawAnimator.SetBool("isAttacking", true);
+            hitbox.SetActive(true);
+
+            //if (currAttackSource == null || !currAttackSource.isPlaying) currAttackSource = audioManager.instance.playAudio(slashDouble, 0.5f, 1, transform, audioManager.instance.sfx);
             rb.linearVelocity = direction * (speed);
             alrHit = true;
         }
@@ -84,6 +100,8 @@ public class WendigoScript : EnemyScript
     IEnumerator charge(bool isFirst)
     {
         if (!canAttack && isFirst) yield break;
+        hitbox.SetActive(false);
+
         isAttacking = true;
         isCharging = true;
         animator.SetBool("isHit", false);
@@ -102,6 +120,8 @@ public class WendigoScript : EnemyScript
         shouldRotate = false;
         Vector2 dir = direction;
         //animator.Play("Charge");
+
+        chargeHitbox.SetActive(true);
         rb.linearVelocity = dir * (chargeSpeed);
     }
 
@@ -139,6 +159,7 @@ public class WendigoScript : EnemyScript
         isAttacking = true;
         canAttack = false;
 
+
         int random = Random.Range(0, 1);
 
         if(random == 0)
@@ -153,6 +174,8 @@ public class WendigoScript : EnemyScript
         shouldRotate = false;
         GameObject attHitbox = UnityEngine.Random.Range(0, 2) == 0 ? clawHitbox : hexaHitbox;
         yield return new WaitForSeconds(chargeUpS);
+        currAttackSource = audioManager.instance.playAudio(slashLong, 0.5f, 1, transform, audioManager.instance.sfx);
+
         //attHitbox.SetActive(true);
         yield return new WaitForSeconds(attackDurS);
         //Time.timeScale = 0;
@@ -172,6 +195,10 @@ public class WendigoScript : EnemyScript
         if(isCharging && collision.gameObject.tag.Equals("border"))
         {
             print("dashing again");
+            audioManager.instance.playAudio(wallHit, 0.65f, 1, transform, audioManager.instance.sfx);
+            chargeHitbox.SetActive(false);
+
+
             cum.StartShake(wallShake);
             StartCoroutine(backCharge());
         }
@@ -207,6 +234,7 @@ public class WendigoScript : EnemyScript
         }
     }
 
+
     public IEnumerator starter()
     {
         start = false;
@@ -224,6 +252,8 @@ public class WendigoScript : EnemyScript
 
     public override void damage(int damage)
     {
+        audioManager.instance.playAudio(damageSound, 0.5f, 1, transform, audioManager.instance.sfx);
+
         spriteFlash.callFlash();
         hp-=damage;
         if(hp <= 0)

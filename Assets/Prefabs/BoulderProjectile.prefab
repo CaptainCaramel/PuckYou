@@ -170,3 +170,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   particles: {fileID: 8023007042503218261, guid: 31db1a1be76ece04dab3d4e432cbb8aa, type: 3}
+  breakSound: {fileID: 8300000, guid: e00544f029867d64f9a12e6e9b431523, type: 3}

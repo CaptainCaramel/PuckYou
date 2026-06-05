@@ -8,9 +8,11 @@ public class SnowmanScript : EnemyScript
     public float projectileSpeed = 5;
     public float cooldown = 1.3f;
 
+    [SerializeField] private AudioClip[] deathSounds;
     protected override void Start()
     {
         base.Start();
+        deathSound = deathSounds;
         float range = UnityEngine.Random.Range(3, 5);
         setSpeedAndRange(2, range);
         fov = 15f;

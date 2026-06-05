@@ -7,9 +7,11 @@ public class IceMemphitScript : EnemyScript
     bool StopFollow, Stop, shouldStart = true;
     public float velocity = 3.5f;
 
+    [SerializeField] private AudioClip[] deathSounds;
     protected override void Start()
     {
         base.Start();
+        deathSound = deathSounds;
         velocity = UnityEngine.Random.Range(4, 6);
         setSpeedAndRange(velocity, 1000000000000000000f);
         shouldStart = false;

@@ -85,11 +85,15 @@ MonoBehaviour:
   Krampus: {fileID: 0}
   spriteFlash: {fileID: 2463574872862648204}
   hp: 2
+  damageSound: {fileID: 8300000, guid: 997e370785303e54ca532c425f7107d2, type: 3}
   projectileSpawnLocation: {fileID: 1615431035087512883}
   projectile: {fileID: 3302735451581132710, guid: 152f28758da1d4b448c43f7aacdeb021, type: 3}
   projectileSpeed: 14
   cooldown: 1
   chargeUp: 1.17
+  deathSounds:
+  - {fileID: 8300000, guid: 70eb3479448692043b90f59a29dd91e2, type: 3}
+  - {fileID: 8300000, guid: 30389102a91ed6c4a99b94dc0c078813, type: 3}
 --- !u!58 &7238797449126280847
 CircleCollider2D:
   m_ObjectHideFlags: 0

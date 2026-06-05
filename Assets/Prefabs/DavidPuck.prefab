@@ -4985,6 +4985,8 @@ MonoBehaviour:
   sendOnAwake: 1
   spawnTime: 0.25
   returnObj: {fileID: 0}
+  wallHit: {fileID: 8300000, guid: 8d2304e22f2a55b459ea14b0e26c962a, type: 3}
+  returnSound: {fileID: 8300000, guid: 1766a6618e84ab148a9692f05c0b2fd7, type: 3}
   explosionRadius: 4.5
   explosionLayer:
     useTriggers: 0
@@ -5001,6 +5003,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   particles: {fileID: 5019521204312107564, guid: 60484d1840ac8084cadc84613d33c241, type: 3}
+  parrySound: {fileID: 8300000, guid: d2fe41d83d3a5654bbba830416025e2c, type: 3}
 --- !u!50 &7048131091350983387
 Rigidbody2D:
   serializedVersion: 5

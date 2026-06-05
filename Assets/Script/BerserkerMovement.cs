@@ -36,6 +36,10 @@ public class BerserkerMovement : PlayerMovement
 
     [SerializeField] private GameObject spinPuck;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip qSound;
+    [SerializeField] private AudioClip eSound, ultStartSound, ultSound;
+
     protected override void Awake()
     {
         playerClass = PlayerClass.berserker;
@@ -83,6 +87,7 @@ public class BerserkerMovement : PlayerMovement
         dashHitBox.SetActive(true);
 
         spriteAnimator.Play("red_slide");
+        audioMgr.playAudio(eSound, 0.5f, 1, transform, audioMgr.sfx);
 
         rb.AddForce(transform.right *  dashForce * dashCharge * 250);
         dashCharge = 0;
@@ -111,6 +116,9 @@ public class BerserkerMovement : PlayerMovement
         
         spinPuck.SetActive(true);
         puckHover.SetActive(false);
+
+        audioMgr.playAudio(qSound, 0.5f, 1, transform, audioMgr.sfx);
+
         spinAnimator.Play("Spin");
         yield return new WaitForSeconds(spinTime);
 
@@ -136,6 +144,9 @@ public class BerserkerMovement : PlayerMovement
 
         CameraManager.instance.changeZoom(ultCamSize, 1, true);
         VignetteControllerScript.instance.changeIntensity(0.4f, 1, true);
+
+        audioMgr.playAudio(ultStartSound, 0.6f, 1, transform, audioMgr.sfx);
+
         yield return new WaitForSecondsRealtime(2.5f);
 
         Time.timeScale = 1;
@@ -148,6 +159,8 @@ public class BerserkerMovement : PlayerMovement
 
     private IEnumerator berserkMode()
     {
+        audioMgr.playAudio(ultSound, 0.4f, 1, transform, audioMgr.sfx);
+
         ultPucks.SetActive(true);
         berserk = true;
         yield return new WaitForSeconds(ultTime);
@@ -165,9 +178,9 @@ public class BerserkerMovement : PlayerMovement
         ult_onCooldown= false;
     }
 
-    public void heal(float amount)
+    public void heal(int amount)
     {
-        //
+        hp += amount;
     }
 
 
@@ -193,6 +206,8 @@ public class BerserkerMovement : PlayerMovement
 
     protected override void Attack_EAction(InputAction.CallbackContext callbackContext)
     {
+        if (!CanE() || !isChargingDash) return;
+
         isChargingDash = false;
         StartCoroutine(dash());
 

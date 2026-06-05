@@ -12,10 +12,19 @@ public class MeleeEnemyScript : EnemyScript
     public GameObject sparks;
     public SpriteRenderer slowerRenderer, selfRenderer;
 
+
+    [SerializeField] private AudioClip slash, smash;
+    private AudioClip attackSound;
+
+    [SerializeField] private AudioClip[] wolfDeathSounds;
+    [SerializeField] private AudioClip[] golemDeathSounds;
     protected override void Start()
     {
         base.Start();
         float speed = isGolem ? UnityEngine.Random.Range(3.5f, 4) : (isWhite ? 4f : 3f);
+        attackSound = isGolem ? smash : slash;
+        deathSound = isGolem? golemDeathSounds : wolfDeathSounds;
+
         float range = 0.8f;
         setSpeedAndRange(speed, 0.8f);
         if (!isGolem) fov = 45f;
@@ -38,6 +47,7 @@ public class MeleeEnemyScript : EnemyScript
             sparks.SetActive(false);
         }
         yield return new WaitForSeconds(chargeUp);
+        audioManager.instance.playAudio(attackSound, 0.5f, 1, transform, audioManager.instance.sfx);
         attHitbox.SetActive(true);
         yield return new WaitForSeconds(attackDur);
         //Time.timeScale = 0;

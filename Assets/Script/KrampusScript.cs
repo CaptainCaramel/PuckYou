@@ -8,9 +8,12 @@ public class KrampusScript : EnemyScript
     public Transform[] spawnLocations;
     public float velocity = 2f;
 
+    [SerializeField] private AudioClip[] deathSounds;
+
     protected override void Start()
     {
         base.Start();
+        deathSound = deathSounds;
         float range = UnityEngine.Random.Range(8, 10);
         setSpeedAndRange(velocity, range);
         fov = 180;

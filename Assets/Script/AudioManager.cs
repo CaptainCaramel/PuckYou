@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 public class audioManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class audioManager : MonoBehaviour
     }
     public AudioSource playAudio(AudioClip a, float volume, float pitch, Transform pos, AudioMixerGroup channel)
     {
+        if (a == null) return null;
+
         AudioSource audioSource = Instantiate(source, pos.position, Quaternion.identity);
         audioSource.clip = a;
         audioSource.volume = volume;
@@ -26,6 +29,8 @@ public class audioManager : MonoBehaviour
     }
     public AudioSource playRandomAudio(AudioClip[] a, float volume, float pitch, Transform pos, AudioMixerGroup channel)
     {
+        if (a == null) return null;
+
         AudioSource audioSource = Instantiate(source, pos.position, Quaternion.identity);
         audioSource.clip = a[Random.Range(0, a.Length)];
         audioSource.volume = volume;

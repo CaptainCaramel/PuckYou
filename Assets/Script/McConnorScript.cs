@@ -38,6 +38,10 @@ public class McConnorScript : PlayerMovement
     private float _lerpAmount;
     [SerializeField] private float ultSpeedUpTime;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip qSound;
+    [SerializeField] private AudioClip eSound, ultSound;
+
     protected override void Awake()
     {
         playerClass = PlayerClass.frostbite;
@@ -81,6 +85,7 @@ public class McConnorScript : PlayerMovement
         lockMovement(true);
 
         dashHitBox.SetActive(true);
+        audioMgr.playAudio(eSound, 0.45f, 1, transform, audioMgr.sfx);
 
         spriteAnimator.Play("david_slide");
         trailRenderer.emitting = true;
@@ -113,6 +118,8 @@ public class McConnorScript : PlayerMovement
         isQing = true;
         qCRT = StartCoroutine(trailSpawner());
 
+        audioMgr.playAudio(qSound, 0.45f, 1, transform, audioMgr.sfx);
+
         yield return new WaitForSeconds(qTime);
 
         StopCoroutine(qCRT);
@@ -144,6 +151,9 @@ public class McConnorScript : PlayerMovement
         invincible = true;
         speedUp();
         lockMovement(true);
+
+        audioMgr.playAudio(ultSound, 0.45f, 1, transform, audioMgr.sfx);
+
         afterimageGenerator.startGeneration();
         CameraManager.instance.changeZoom(8, 4, false);
         ultHitbox.SetActive(true);

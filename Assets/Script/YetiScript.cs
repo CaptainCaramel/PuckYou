@@ -13,9 +13,12 @@ public class YetiScript : EnemyScript
     public float projectileSpeed = 3;
     public float cooldown = 1.3f, chargeUp = 1f;
 
+    [SerializeField] private AudioClip[] deathSounds;
+
     protected override void Start()
     {
         base.Start();
+        deathSound = deathSounds;
         int range = Random.Range(4, 8);
         tooFarDistance = range + 0.5f;
         setSpeedAndRange(3, range);

@@ -195,6 +195,7 @@ MonoBehaviour:
   Krampus: {fileID: 0}
   spriteFlash: {fileID: 0}
   hp: 1
+  damageSound: {fileID: 8300000, guid: 997e370785303e54ca532c425f7107d2, type: 3}
   iceMemphit: {fileID: 4169839648333897261, guid: 64f06f29c1b6da145983a9b927fe9b86, type: 3}
   cooldown: 4
   chargeUp: 1
@@ -203,6 +204,10 @@ MonoBehaviour:
   - {fileID: 339833541014398864}
   - {fileID: 7116472671347187807}
   velocity: 2
+  deathSounds:
+  - {fileID: 8300000, guid: 1ef7d58d9ca51804082a2484990ad03e, type: 3}
+  - {fileID: 8300000, guid: 9a8791e91918959498dc45e47139ee5c, type: 3}
+  - {fileID: 8300000, guid: 70eb3479448692043b90f59a29dd91e2, type: 3}
 --- !u!95 &7049756845775207117
 Animator:
   serializedVersion: 7

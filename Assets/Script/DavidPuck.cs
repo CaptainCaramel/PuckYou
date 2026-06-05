@@ -7,6 +7,8 @@ public class DavidPuck : PuckScript
     [SerializeField] private ContactFilter2D explosionLayer;
     [SerializeField] private GameObject particles;
 
+    [SerializeField] private AudioClip parrySound;
+
     protected override void Awake()
     {
         base.Awake();
@@ -15,6 +17,8 @@ public class DavidPuck : PuckScript
 
     private void explosion()
     {
+        audioManager.instance.playAudio(parrySound, 0.5f, 1, transform, audioManager.instance.sfx);
+
         Instantiate(particles, transform.position, transform.rotation);
         List<Collider2D> l = new List<Collider2D>();
         Physics2D.OverlapCircle(transform.position, explosionRadius, explosionLayer, l);

@@ -13,7 +13,7 @@ public class enemyDamager : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerMovement>() == null) return;
+        if (collision.gameObject.GetComponent<PlayerMovement>() != null) return;
         EnemyScript enemyScript = collision.GetComponent<EnemyScript>();
         if (enemyScript != null) enemyScript.damage(damage);
 

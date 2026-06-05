@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using static UnityEditor.Rendering.InspectorCurveEditor;
 
 public class TWDUltShotScript : MonoBehaviour
 {
@@ -45,12 +44,4 @@ public class TWDUltShotScript : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnDrawGizmos()
-    {
-        Color c = Color.yellow;
-        c.a = 0.2f;
-        Handles.color = c;
-
-        Handles.DrawSolidDisc(transform.position, new Vector3(0, 0, 1), range);
-    }
 }

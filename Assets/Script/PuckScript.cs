@@ -35,6 +35,8 @@ public class PuckScript : MonoBehaviour
 
     public static PuckScript instance;
 
+    [SerializeField] private AudioClip wallHit, returnSound;
+
     protected virtual void Awake()
     {
         instance = this;
@@ -94,6 +96,8 @@ public class PuckScript : MonoBehaviour
 
     protected void returnPuck(PlayerMovement pm)
     {
+        audioManager.instance.playAudio(returnSound, 0.5f, 1, transform, audioManager.instance.sfx);
+
         pm.StartCoroutine(pm.puckReturn());
         trailParticle.transform.parent = null;
         trailParticle.Stop();
@@ -146,6 +150,7 @@ public class PuckScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 10)
         {
+            audioManager.instance.playAudio(wallHit, 0.5f, 1, transform, audioManager.instance.sfx);
             backtothefuture();
         }
     }

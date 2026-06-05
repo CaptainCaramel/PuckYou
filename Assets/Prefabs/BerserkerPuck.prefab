@@ -4985,7 +4985,10 @@ MonoBehaviour:
   sendOnAwake: 1
   spawnTime: 0.25
   returnObj: {fileID: 0}
+  wallHit: {fileID: 8300000, guid: 8d2304e22f2a55b459ea14b0e26c962a, type: 3}
+  returnSound: {fileID: 8300000, guid: 1766a6618e84ab148a9692f05c0b2fd7, type: 3}
   spinMode: 0
+  parrySound: {fileID: 8300000, guid: b0b455283346726489d92602a3af272d, type: 3}
 --- !u!50 &7048131091350983387
 Rigidbody2D:
   serializedVersion: 5

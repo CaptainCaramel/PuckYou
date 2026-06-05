@@ -7,9 +7,15 @@ public class playerActivatorScript : MonoBehaviour
     public GameObject red, ult;
     public GameObject blue;
     public GameObject yellow;
+
+    [SerializeField] private int overrideClass = -1;
+
     void Awake()
     {
         int klasi = functionScript.klasi;
+
+        if(overrideClass != -1) klasi = overrideClass;
+
         switch(klasi)
         {
             case 0:
@@ -24,11 +30,5 @@ public class playerActivatorScript : MonoBehaviour
                 break;
         }
             
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

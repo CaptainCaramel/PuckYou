@@ -176,6 +176,7 @@ MonoBehaviour:
   Krampus: {fileID: 0}
   spriteFlash: {fileID: 0}
   hp: 1
+  damageSound: {fileID: 8300000, guid: 997e370785303e54ca532c425f7107d2, type: 3}
   attHitbox: {fileID: 6502455867398168881}
   cooldown: 1
   attackDur: 0.45
@@ -185,6 +186,16 @@ MonoBehaviour:
   sparks: {fileID: 0}
   slowerRenderer: {fileID: 0}
   selfRenderer: {fileID: 4193703439762590511}
+  slash: {fileID: 8300000, guid: 3a503ce1cc3e07149a84e4750134fafa, type: 3}
+  smash: {fileID: 8300000, guid: d3ca2a96057f9c643ad5b151db6e75cb, type: 3}
+  wolfDeathSounds:
+  - {fileID: 8300000, guid: 1ef7d58d9ca51804082a2484990ad03e, type: 3}
+  - {fileID: 8300000, guid: 9a8791e91918959498dc45e47139ee5c, type: 3}
+  - {fileID: 8300000, guid: 30389102a91ed6c4a99b94dc0c078813, type: 3}
+  golemDeathSounds:
+  - {fileID: 8300000, guid: 70eb3479448692043b90f59a29dd91e2, type: 3}
+  - {fileID: 8300000, guid: 30389102a91ed6c4a99b94dc0c078813, type: 3}
+  - {fileID: 8300000, guid: d205fd4359757b94994df277f6d71808, type: 3}
 --- !u!95 &6361415762515808383
 Animator:
   serializedVersion: 7

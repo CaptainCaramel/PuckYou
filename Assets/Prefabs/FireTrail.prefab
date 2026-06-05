@@ -4900,9 +4900,9 @@ GameObject:
   - component: {fileID: 934254758099821859}
   - component: {fileID: 426359682094092360}
   - component: {fileID: 3888309481241924826}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: collider
-  m_TagString: puck
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5039,4 +5039,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efbb3d8d7c19b1240a153c2861dc7860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyDamager
-  damage: 4
+  damage: 3
