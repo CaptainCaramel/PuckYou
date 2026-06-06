@@ -36,7 +36,7 @@ public class EnemyScript : MonoBehaviour
     {
         if(shouldRandomize) spriteRenderer.sortingOrder = UnityEngine.Random.Range(RangeMinus, RangeMaximum);
         player = PlayerMovement.instance.gameObject.transform;
-        EnemyManager.instance.Enemies.Add(gameObject);
+        if(EnemyManager.instance != null) EnemyManager.instance.Enemies.Add(gameObject);
         snapAtTarget(player);
         StartCoroutine(wakeUp());
         SetupSubscriptionToCaptainCaramel();
@@ -118,6 +118,7 @@ public class EnemyScript : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        print("collided");
         /*
         if (collision.gameObject.tag.Equals("puck"))
         {

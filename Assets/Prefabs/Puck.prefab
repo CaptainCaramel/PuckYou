@@ -4985,6 +4985,8 @@ MonoBehaviour:
   sendOnAwake: 1
   spawnTime: 0.25
   returnObj: {fileID: 0}
+  wallHit: {fileID: 0}
+  returnSound: {fileID: 0}
 --- !u!50 &7048131091350983387
 Rigidbody2D:
   serializedVersion: 5
@@ -5111,7 +5113,7 @@ TrailRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 32754
   m_MaskInteraction: 0
   m_Time: 2.5
   m_PreviewTimeScale: 1

@@ -15,7 +15,7 @@ public class playerActivatorScript : MonoBehaviour
         int klasi = functionScript.klasi;
 
         if(overrideClass != -1) klasi = overrideClass;
-
+        klasi = 1;
         switch(klasi)
         {
             case 0:
