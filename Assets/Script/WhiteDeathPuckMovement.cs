@@ -37,6 +37,6 @@ public class WhiteDeathPuckMovement : PuckScript
 
         currReturnSpeed += 2.5f;
          
-        camShakerScript.StartShake(hitShake);
+        //camShakerScript.StartShake(hitShake);
     }
 }

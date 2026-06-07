@@ -30,8 +30,8 @@ public class MeleeEnemyScript : EnemyScript
         if (!isGolem) fov = 45f;
         else
         {
-            slowerRenderer.sortingOrder = UnityEngine.Random.Range(10, 19);
-            range = UnityEngine.Random.Range(0.6f, 1);
+            slowerRenderer.sortingOrder = UnityEngine.Random.Range(10, 18);
+            range = UnityEngine.Random.Range(1f, 1.2f);
             fov = 180f;
         }
         setSpeedAndRange(speed, range);

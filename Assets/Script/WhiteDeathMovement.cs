@@ -178,7 +178,9 @@ public class WhiteDeathMovement : PlayerMovement
         AbilitySliderController.instance.resetSlider(2);
 
         ult_onCooldown = true;
+        print("waiting");
         yield return new WaitForSeconds(UltCooldown);
+        print("waiting vso");
         ult_onCooldown = false;
 
     }
@@ -243,7 +245,12 @@ public class WhiteDeathMovement : PlayerMovement
 
     protected override void Attack_UltAction(InputAction.CallbackContext callbackContext)
     {
-        if(!CanR()) return;
+        if(!CanR()) 
+        {
+            print("returning");
+            return;
+        }
+       
 
         StartCoroutine(UltLife());
     }

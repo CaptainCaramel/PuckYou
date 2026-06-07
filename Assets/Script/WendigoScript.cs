@@ -23,7 +23,7 @@ public class WendigoScript : EnemyScript
     public Transform wendysFuneralLocation;
     public GameObject ender;
     public GameObject wall;
-    new public spriteFlashScript spriteFlash;
+    public spriteFlashScript selfFlash;
     public Animator endingAnimator;
     public Animator chucker;
     bool first;
@@ -46,8 +46,9 @@ public class WendigoScript : EnemyScript
         StartCoroutine(starter());
         snapAtTarget(wall.transform);
         spriteFlash = GetComponent<spriteFlashScript>();
-        hp = 100;
+        hp = 2000;
         first = true;
+        spriteFlash = selfFlash;
     }
 
     public override void Movement()
@@ -143,7 +144,7 @@ public class WendigoScript : EnemyScript
     IEnumerator disableChecking()
     {
         canReCheck = false;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(5.5f);
         canReCheck = true;
     }
 
@@ -208,7 +209,8 @@ public class WendigoScript : EnemyScript
     {
         rb.angularVelocity = 0;
         rb.linearVelocity = -transform.forward * 50;
-        halt();
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0;
         if (isBegin)
         {
             isBegin = false;
@@ -221,9 +223,12 @@ public class WendigoScript : EnemyScript
         }
         else
         {
-            isBegin = true;
             isCharging = false;
+            isBegin = true;
             animator.SetBool("isStopped", true);
+            //rb.linearVelocity = Vector2.zero;
+            //rb.angularVelocity = 0;
+            animator.SetBool("isCharging", false);
             yield return new WaitForSeconds(0.3f);
             animator.SetBool("isCharging", false);
             animator.SetBool("isStopped", false);
@@ -258,12 +263,24 @@ public class WendigoScript : EnemyScript
         hp-=damage;
         if(hp <= 0)
         {
-            start = false;
-            Instantiate(deathParticles, wendysFuneralLocation.position, Quaternion.identity);
-            endingAnimator.SetBool("end", true);
-            chucker.SetBool("chuck", true);
-            Destroy(hpslider);
-            Destroy(gameObject);
+            StartCoroutine(audioTurnoffer());
         }
+    }
+
+    IEnumerator audioTurnoffer()
+    {
+        start = false;
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0;
+        clawAnimator.SetBool("isCrashingOut", false);
+        clawAnimator.SetBool("isAttacking", false);
+        animator.SetBool("isDeading", true);    
+        yield return new WaitForSeconds(3f);
+        endingAnimator.SetBool("end", true);
+        chucker.SetBool("chuck", true);
+        AudioListener.volume = 0;
+        Instantiate(deathParticles, wendysFuneralLocation.position, Quaternion.identity);
+        Destroy(hpslider);
+        Destroy(gameObject);
     }
 }

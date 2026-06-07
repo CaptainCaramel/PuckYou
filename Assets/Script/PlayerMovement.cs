@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.InputSystem.Processors;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip[] attackSounds;
     [SerializeField] private AudioClip damageSound;
 
+    public bool dead;
 
     public enum PlayerClass {berserker = 0, theWhiteDeath = 1, frostbite = 2}
     public PlayerClass playerClass;
@@ -83,6 +85,8 @@ public class PlayerMovement : MonoBehaviour
     protected audioManager audioMgr;
 
     public GameObject deather;
+
+    public Animator chucker;
 
     protected virtual void Awake()
     {
@@ -94,6 +98,8 @@ public class PlayerMovement : MonoBehaviour
         //sFlash = GetComponent<spriteFlashScript>();
         attackAvailable = true;
         isAttacking = false;
+
+        dead = false;
 
         isQing = false;
         isEing = false;
@@ -110,6 +116,8 @@ public class PlayerMovement : MonoBehaviour
         fallBackSpeed = baseSpeed;
 
         yinulisGamgisAnimator = GameObject.Find("YinulisGamge").GetComponent<Animator>();
+
+        chucker = GameObject.Find("NoPPCanvas").GetComponent<Animator>();
     }
 
     protected virtual void OnEnable()
@@ -266,7 +274,11 @@ public class PlayerMovement : MonoBehaviour
         hp -= damage;
         if(hp <= 0)
         {
+            chucker.SetBool("chuck", true);
+            dead = true;
             deather.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            AudioListener.volume = 0f;
             yield break;
         }
         sFlash.callFlash();
@@ -372,7 +384,7 @@ public class PlayerMovement : MonoBehaviour
             else if (tag.Equals("threeHit")) damageDeal = 15;
             else if (tag.Equals("fourHit")) damageDeal = 18;
             StartCoroutine(damage(damageDeal));
-            if (collision.gameObject.name != "bite" && collision.gameObject.name != "Punch" && !collision.gameObject.name.Contains("Wendy")) Destroy(collision.gameObject);
+            if (collision.gameObject.name != "bite" && collision.gameObject.name != "Punch" && !collision.gameObject.name.Contains("Wendy") && !collision.gameObject.name.Contains("charge") && !collision.gameObject.name.Contains("walk")) Destroy(collision.gameObject);
         }
 
         if (tag.Equals("campfire"))

@@ -132,7 +132,7 @@ public class PuckScript : MonoBehaviour
             currReturnSpeed += returnSpeedIncrement;
             backtothefuture();
         }
-        camShakerScript.StartShake(hitShake);
+        //camShakerScript.StartShake(hitShake);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -140,6 +140,7 @@ public class BerserkerMovement : PlayerMovement
 
     private IEnumerator ultStart()
     {
+        isUlting = true;
         Time.timeScale = 0.2f;
 
         CameraManager.instance.changeZoom(ultCamSize, 1, true);
@@ -175,6 +176,7 @@ public class BerserkerMovement : PlayerMovement
 
         ult_onCooldown = true;
         yield return new WaitForSeconds(ultCooldown);
+        isUlting = false;
         ult_onCooldown= false;
     }
 
@@ -215,7 +217,8 @@ public class BerserkerMovement : PlayerMovement
 
     protected override void Attack_UltAction(InputAction.CallbackContext callbackContext)
     {
-        if (!CanR()) return;
+        print("isUlting: " + isUlting);
+        if (!CanR() || isUlting) return;
         StartCoroutine(ultStart());
     }
 

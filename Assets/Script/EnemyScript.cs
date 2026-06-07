@@ -178,7 +178,7 @@ public class EnemyScript : MonoBehaviour
         isDead = true;
         audioManager.instance.playRandomAudio(deathSound, 0.45f, 1, transform, audioManager.instance.sfx);
         Instantiate(deathParticles, this.transform.position, Quaternion.identity);
-        if(!EnemyManager.instance.bossFightStarted) EnemyManager.instance.incrimentDeath();
+        EnemyManager.instance.incrimentDeath();
         Destroy(gameObject);
     }
 
@@ -202,6 +202,12 @@ public class EnemyScript : MonoBehaviour
 
     private void SetupSubscriptionToCaptainCaramel()
     {
-        if(EnemyManager.instance != null) EnemyManager.instance.bossfightStartedEv += death;
+        if(EnemyManager.instance != null) EnemyManager.instance.bossfightStartedEv += OnBossStartKill;
+    }
+
+    private void OnBossStartKill()
+    {
+        if (this == null) return;
+        death();
     }
 }

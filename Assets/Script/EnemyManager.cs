@@ -58,7 +58,8 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(spawning());
-
+        //killCount = 170;
+        //incrimentDeath();
     }
 
     private void FixedUpdate()
@@ -121,6 +122,7 @@ public class EnemyManager : MonoBehaviour
         while(true && !EnemyManager.instance.bossFightStarted)
         {
             yield return new WaitForSeconds(waitTime);
+            print("killCount: " + killCount);
             if (EnemyManager.instance.Enemies.Count >= 15) continue;
             for(int i = 0; i <= spawnAmount; i++)
             {
@@ -141,16 +143,18 @@ public class EnemyManager : MonoBehaviour
                 Instantiate(spawned, new Vector2(randomX, randomY), Quaternion.identity);
             }        
         }
+        print("stopped killCount");
     }
 
     public void WendigoAttack()
     {
         StartCoroutine(levanisDabadebisdgisCountdown());
-        bossfightStartedEv?.Invoke();
     }
 
     IEnumerator levanisDabadebisdgisCountdown()
     {
+        print("killCount started me");
+        bossfightStartedEv?.Invoke();
         yield return new WaitForSeconds(4f);
         levanisDabadebisdge.SetActive(true);
         chucker.SetBool("chuck", true);

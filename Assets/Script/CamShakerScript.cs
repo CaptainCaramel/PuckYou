@@ -23,6 +23,7 @@ public class CamShakerScript : MonoBehaviour
 
     public IEnumerator shake()
     {
+        if (PlayerMovement.instance.dead) yield break; 
         cam = ShakeCamScript.instance.gameObject.GetComponent<CinemachineCamera>();
         cbmcp = ShakeCamScript.instance.gameObject.GetComponent<CinemachineBasicMultiChannelPerlin>();
 

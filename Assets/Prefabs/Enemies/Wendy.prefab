@@ -714,7 +714,7 @@ MonoBehaviour:
   wendysFuneralLocation: {fileID: 8447657448391253141}
   ender: {fileID: 0}
   wall: {fileID: 0}
-  spriteFlash: {fileID: 2842160761081893067}
+  selfFlash: {fileID: 2842160761081893067}
   endingAnimator: {fileID: 0}
   chucker: {fileID: 0}
   slashDouble: {fileID: 8300000, guid: b7fa557211dac1a4c95bca4255ad0d79, type: 3}
@@ -722,6 +722,8 @@ MonoBehaviour:
   wallHit: {fileID: 8300000, guid: ebfdfcba589a2e94ab572cbc8d1ea457, type: 3}
   sikdili:
   - {fileID: 8300000, guid: 14871f4cbd990bb4eab662275c7d2015, type: 3}
+  hitbox: {fileID: 0}
+  chargeHitbox: {fileID: 0}
 --- !u!95 &602110709999009757
 Animator:
   serializedVersion: 7
