@@ -264,6 +264,7 @@ public class WendigoScript : EnemyScript
         hp-=damage;
         if(hp <= 0)
         {
+            StopAllCoroutines();
             StartCoroutine(audioTurnoffer());
         }
     }
@@ -271,7 +272,6 @@ public class WendigoScript : EnemyScript
     IEnumerator audioTurnoffer()
     {
         dead = true;
-        StopAllCoroutines();
         rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0;
         clawAnimator.SetBool("isCrashingOut", false);
@@ -281,7 +281,7 @@ public class WendigoScript : EnemyScript
         yield return new WaitForSeconds(3f);
         endingAnimator.SetBool("end", true);
         chucker.SetBool("chuck", true);
-        AudioListener.volume = 0;
+        Destroy(audioManager.instance.gameObject);
         Instantiate(deathParticles, wendysFuneralLocation.position, Quaternion.identity);
         Destroy(hpslider);
         Destroy(gameObject);

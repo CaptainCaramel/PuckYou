@@ -278,7 +278,7 @@ public class PlayerMovement : MonoBehaviour
             dead = true;
             deather.SetActive(true);
             yield return new WaitForSeconds(1f);
-            AudioListener.volume = 0f;
+            Destroy(audioManager.instance.gameObject);
             yield break;
         }
         sFlash.callFlash();
